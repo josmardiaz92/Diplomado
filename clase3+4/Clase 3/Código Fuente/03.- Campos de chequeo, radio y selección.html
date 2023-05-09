@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Campos de chequeo, radio y selección</title>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<h2>Campos de chequeo, radio y selección:</h2>
+
+	<form method="" action="" enctype="">
+		<!-- Campos de Cajas de Chequeo para selección múltiple o individual-->
+		<div>
+			<label for="cursos_realizados"><b>Cursos Realizados:</b></label>
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="diseno_web_wordpress">Diseño de Páginas Web con WordPress
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="diseno_web_elementor">Diseño de Páginas Web con Elementor
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="diseno_redes_sociales">Diseño para Redes Sociales
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="community_manager">Community Manager
+		</div> 
+		<hr>
+		<!-- Campos de Radio Selección para selección individual -->
+		<div>
+			<label for="sexo"><b>Sexo:</b></label>
+			<input type="radio" name="sexo" value="masculino">Másculino
+			<input type="radio" name="sexo" value="femenino">Femenino
+		</div> 	
+		<hr>
+		<!-- Lista desplegable de opciones para selección individual -->
+		<div>
+			<label for="edad"><b>Edad:</b></label>
+			<select name="edad" id="edad">
+				<option value="">Seleccione...</option>
+				<option value="0_20">De 0 a 20 Años</option>
+				<option value="21_40">De 21 a 40 Años</option>
+				<option value="41_60">De 41 a 60 Años</option>
+				<option value="61_80">De 61 a 80 Años</option>
+				<option value="80+">Mayor de 80 Años</option>
+			</select>
+		</div>	
+	</form>
+
+</body>
+</html>

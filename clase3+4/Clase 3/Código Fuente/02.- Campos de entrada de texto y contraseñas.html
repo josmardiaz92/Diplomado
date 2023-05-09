@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Campos de entrada de texto y contraseñas</title>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<h2>Campos de entrada de texto y contraseñas:</h2>
+
+	<form method="" action="" enctype="">
+		<div>
+			<label for="nombre">Nombre:</label>
+			<input type="text" id="nombre" name="nombre" size="16" maxlength="15" placeholder="Ingrese su Nombre">
+		</div> 
+		<!--id suele ser usado para agregarle funcionalidades/interacción a un elemento de HTML desde JS. Para que cuando el usuario haga clic ahí, el elemento haga algo. Mientras que el atributo name es usado para identificar un dato de un formulario en un servidor o base de datos.-->
+		<div>
+			<label for="clave">Contraseña:</label>
+			<input type="password" id="clave" name="clave" size="16" maxlength="10" placeholder="Ingrese su Contraseña" pattern="[ñÑÁáÉéÍíÓóÚúa-zA-Z0-9]{4,8}" title="No inserte simbolos">
+		</div> 		
+		<input type="submit">
+	</form>
+	<!--Expresiones Regulares:
+		.       - Cualquier Caracter, excepto nueva linea
+		\d      - Cualquier Digito (0-9)
+		\D      - No es un Digito (0-9)
+		\w      - Caracter de Palabra (a-z, A-Z, 0-9, _)
+		\W      - No es un Caracter de Palabra.
+		\s      - Espacios de cualquier tipo. (espacio, tab, nueva linea)
+		\S      - No es un Espacio, Tab o nueva linea.
+
+		Cuantificadores:
+		*       - 0 o Más
+		+       - 1 o Más
+		?       - 0 o Uno
+		{3}     - Numero Exacto
+		{3,4}   - Rango de Numeros (Minimo, Maximo)-->
+
+
+</body>
+</html>
