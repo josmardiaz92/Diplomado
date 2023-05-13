@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios - Ejercicio:</h1>
+    <br>
+    <form method="post" action="" enctype="multipart/form-data">
+        <div>
+            <label for="cedula">Cédula: </label>
+            <input type="text" id="cedula" name="cedula" size="20" maxlength="20" placeholder="Ingrese su Cédula" pattern="[-.vjgVJG0-9]+">
+        </div>
+        <br>
+        <div><label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" size="20" maxlength="10" placeholder="Ingrese su Nombre">
+        </div>
+        <br>
+        <div>            
+            <label for="apellido">Apellido: </label>
+            <input type="text" id="apellido" name="apellido" size="20" maxlength="10" placeholder="Ingrese su Apellido" title="Sólo Números">
+        </div>
+        <br>
+        <div>
+            <label for="contraseña">Contraseña: </label>
+            <input type="password" id="contraseña" name="contraseña" size="20" maxlength="10" placeholder="Ingrese su Cédula" pattern="[ñÑÁáÉéÍíÓóÚúa-zA-Z0-9]{4,8}" title="No inserte simbolos">
+        </div>
+        <br>
+        <div>
+            <label for="cursos_realizados"><b>Cursos Realizados:</b></label>
+            <br>
+			<input type="checkbox" name="cursos_realizados" value="programacion_basica">Promgramación Básica
+            <br>
+			<input type="checkbox" name="cursos_realizados" value="php_y_mysql">PHP y MySQL
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="html_y_css">HTML y CSS
+			<br>
+			<input type="checkbox" name="cursos_realizados" value="programacion_en_javascrip">Programacion en JavaScrip
+        </div>
+        <br>
+        <div>
+            <label for="sexo"><b>Sexo: </b></label>
+            <input type="radio" name="sexo" value="masculino"> Masculino
+            <input type="radio" name="sexo" value="femenino"> Femenino
+        </div>
+        <br>
+        <div>
+            <label for="fecha"><b>Fecha de nacimiento: </b></label>
+            <input type="date">
+        </div>
+        <br>
+        <div>
+            <label for="area_estudio"><b>Area de Estudio</b> </label>
+            <select name="area_estudio" id="area_estudio">
+                <option value="">Sleccione...</option>
+                <option value="arquitectura">Arquitectura</option>
+                <option value="diseño_grafico">Diseño Gráfico</option>
+                <option value="marqueting_digital">Marqueting Digital</option>
+                <option value="informatica_o_sistemas">Informática | Sistemas</option>
+                <option value="otra">Otra</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="foto"><b>Adjunta tu Foto de Perfil:</b>  </label>
+            <input type="file" name="foto" id="foto">
+        </div>
+        <br>
+        <div>
+            <label for="observaciones"><b>Observaciones: </b> </label>
+            <br>
+            <textarea name="observaciones" id="observaciones" cols="40" rows="5"></textarea>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpiar">
+
+        </div>
+
+    </form>
+</body>
+</html>
