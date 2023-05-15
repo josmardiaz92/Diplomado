@@ -1,0 +1,25 @@
+.cuadro1 {
+    background-color: aqua;
+    width: 130px;
+    height: 150px;
+    margin: 20px 45%;
+}
+
+.cuadro2 {
+    background-color: darkgray;
+    margin: 0px 35% 0px 38%;
+}
+
+.cuadro3 {
+    background-color: blueviolet;
+    padding: 30px 60px 10px 60px;
+    margin: 0px 25% 50px 30%;
+}
+
+.cuadro4 {
+    background-color: black;
+    color: aliceblue;
+    padding: 30px 10px;
+    border: solid 5px blueviolet;
+    margin: 0px 1% 50px 10%;
+}
