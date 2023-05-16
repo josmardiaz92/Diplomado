@@ -1,38 +1,63 @@
-div {
+.izquierdo {
+    position: relative;
+    float: left;
+}
+
+.derecho {
+    position: relative;
+    float: right;
+}
+
+.columnas {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 50px;
-    margin: 0px 10px 0px 10px;
-    
-    
-    
+    vertical-align: middle;
 }
 
 .cuadro {
-    text-align: center;
-    color: aliceblue;
+    color: rgb(5, 5, 5);
     border: outset;
+    width: 100px;
+    height: 90px;
+    margin: 0px 30px 0px 30px;
+    line-height: 90px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
     
 }
 
 
 .morado {
     background-color: blueviolet;
+    display: block;
+    
     
 }
 
 .celeste {
     background-color: aquamarine;
+    display: block;
+
 }
 
 .gris {
     background-color: darkgray;
+    display: block;
 }
 
 #centro {
     background-color: black;
-    width: 150px;
-    height: 120px;
-    
+    color: aliceblue;
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    top: 175px;
+    left: 550px;
+    border: outset;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bolder;
+    z-index: 4;
 }
