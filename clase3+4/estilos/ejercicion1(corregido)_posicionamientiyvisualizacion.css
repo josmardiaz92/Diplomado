@@ -1,0 +1,82 @@
+.morado {
+    background-color: blueviolet;
+    color: white;
+    height: 88px;
+    width: 100px;
+    margin: 0px;
+    border: inset black 3px;
+    text-align: center;
+    padding: 6px 0px;
+}
+
+.celeste {
+    background-color: aqua;
+    color: black;
+    height: 88px;
+    width: 100px;
+    margin: 0px;
+    border: inset black 3px;
+    text-align: center;
+    padding: 6px 0px;
+}
+
+.gris {
+    background-color: darkgray;
+    color: black;
+    height: 88px;
+    width: 100px;
+    margin: 0px;
+    border: inset black 3px;
+    text-align: center;
+    padding: 6px 0px;
+}
+
+.negro {
+    background-color: black;
+    color: white;
+    height: 200px;
+    width: 250px;
+    margin: 0px;
+    text-align: center;
+    padding: 6px 0px;
+    position: absolute;
+    top: 150px;
+    left: 730px;
+}
+
+
+.celeste-izquierdo {
+    position: absolute;
+    top: 54px;
+    left: 150px;
+}
+
+.celeste-derecho {
+    position: absolute;
+    top: 54px;
+    right: 150px;
+}
+
+.gris-izquierdo {
+    position: absolute;
+    top: 110px;
+    left: 300px;
+}
+
+.gris-derecho {
+    position: absolute;
+    top: 110px;
+    right: 300px;
+}
+
+.morado-izquierdo {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.morado-derecho {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+}
