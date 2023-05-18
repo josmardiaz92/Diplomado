@@ -1,0 +1,57 @@
+@font-face{
+	font-family: 'personal';
+	src: url(../fuentes/Mollen-Personal-Use-Regular.otf);
+}
+
+*{
+	font-family: 'personal';
+}
+
+body { 
+	margin: 0;
+}
+
+.logo { 
+	width: 80px;
+	padding-top: 5px;
+}
+
+header { 
+	width: 70%;
+	padding-left: 15%;
+	padding-right: 15%;
+	background-color: #faedfd;
+	border-bottom: 3px inset #fe13a3;
+	font-weight: bold;
+}
+
+nav ul{
+	list-style: none;
+	margin: 0;
+}
+
+nav ul a{
+	text-decoration: none;
+	color: #232323;
+}
+
+.flotador-izquierdo{
+	float: left;
+}
+
+.flotador-derecho{
+	float: right;
+}
+
+nav li{
+	padding: 21px 20px;
+}
+
+nav li:hover{
+	background-color: #fe13a3;
+	color: #232323;
+}
+
+.borde-imagen {
+	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
