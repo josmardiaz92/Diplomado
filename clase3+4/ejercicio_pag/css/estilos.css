@@ -43,15 +43,43 @@ nav ul a{
 	float: right;
 }
 
-nav li{
-	padding: 21px 20px;
-}
-
-nav li:hover{
-	background-color: #fe13a3;
-	color: #232323;
-}
-
 .borde-imagen {
-	clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	width: 100%;
+	background-color: #9FC7AA;
 }
+
+nav li {
+	font-weight: bold;
+	padding: 20px 20px;
+	margin: 0px;
+	position: relative;
+	transition: 0.3s ease all;
+	z-index: 1;
+  }
+
+  
+  
+  nav li:before {
+	transition: 0.7s all ease;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	content: '';
+	background-color: #FF0072;
+	z-index: -1;
+  }
+  
+  nav li:hover, nav li:focus {
+	color: white;
+  }
+  
+  nav li:hover:before, nav li:focus:before {
+	transition: 1s all ease;
+	left: 0;
+	right: 0;
+	opacity: 1;
+  }
+  
