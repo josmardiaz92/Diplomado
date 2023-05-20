@@ -21,6 +21,7 @@ header {
 	padding-left: 15%;
 	padding-right: 15%;
 	background-color: #faedfd;
+	background-image: url(../imagenes/fondo_head.svg);
 	border-bottom: 3px inset #fe13a3;
 	font-weight: bold;
 }
@@ -47,6 +48,8 @@ nav ul a{
 	width: 100%;
 	background-color: #9FC7AA;
 }
+
+/* lo siguiente es para la animacion de los links */
 
 nav li {
 	font-weight: bold;
@@ -83,3 +86,16 @@ nav li {
 	opacity: 1;
   }
   
+
+  @keyframes square-in-bottom-right {
+	from {
+	  clip-path: inset(0 100% 100% 0);
+	}
+	to {
+	  clip-path: inset(0 0 0 0);
+	}
+  }
+  
+  [transition-style="in:square:bottom-right"] {
+	animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-bottom-right both;
+  }
