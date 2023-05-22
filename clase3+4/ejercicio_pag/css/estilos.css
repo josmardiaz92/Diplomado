@@ -1,3 +1,5 @@
+/* estilos del head */
+
 @font-face{
 	font-family: 'personal';
 	src: url(../fuentes/Mollen-Personal-Use-Regular.otf);
@@ -62,7 +64,7 @@ nav li {
 
   
   
-  nav li:before {
+nav li:before {
 	transition: 0.7s all ease;
 	position: absolute;
 	top: 0;
@@ -75,27 +77,64 @@ nav li {
 	z-index: -1;
   }
   
-  nav li:hover, nav li:focus {
+nav li:hover, nav li:focus {
 	color: white;
   }
   
-  nav li:hover:before, nav li:focus:before {
+nav li:hover:before, nav li:focus:before {
 	transition: 1s all ease;
 	left: 0;
 	right: 0;
 	opacity: 1;
   }
-  
 
-  @keyframes square-in-bottom-right {
-	from {
-	  clip-path: inset(0 100% 100% 0);
-	}
-	to {
-	  clip-path: inset(0 0 0 0);
-	}
-  }
-  
-  [transition-style="in:square:bottom-right"] {
-	animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-bottom-right both;
-  }
+/* estilos de laseccion de noticias */
+
+.titulo-seccion{
+	width: 100%;
+	padding-top: 2%;
+	text-align: center;
+} 
+
+.seccion-noticias{
+	width: 80%;
+	padding: 2% 10%;
+}
+
+.noticia-individual{
+	width: 30%;
+	height: 500px;
+	border: 1px solid #D3D3D3;
+	border-radius: 10px;
+	margin: 10px;
+	text-align: justify;
+	padding-bottom: 1%;
+	float: left;
+}
+
+.imagen-noticia{
+	width:100%;
+	height: 180px;
+	background-size: cover;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.titulo-noticia{
+	padding: 1% 5%;
+}
+
+.resumen-noticia{
+	padding: 1% 5%;
+}
+
+.boton-noticia{
+	background-color: #ffbb22;
+	text-decoration: none;
+	color: #232323;
+	text-align: center;
+	display: block;
+	padding: 2% 0;
+	margin: 0 5%;
+	border-radius: 10px;
+	
+}
