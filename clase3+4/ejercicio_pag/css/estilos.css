@@ -109,8 +109,6 @@ nav li:hover:before, nav li:focus:before {
 	z-index: 1;
   }
 
-  
-  
 .boton-noticia:before {
 	transition: 0.7s all ease;
 	position: absolute;
@@ -136,6 +134,8 @@ nav li:hover:before, nav li:focus:before {
 	opacity: 1;
   }
 
+  /* en el boton de contcato */
+
 /* estilos de laseccion de noticias */
 
 .titulo-seccion{
@@ -144,7 +144,7 @@ nav li:hover:before, nav li:focus:before {
 	margin: 0% 25%;
 	text-align: center;
 	background-color: #ffffff05;
-	backdrop-filter: blur(10px);	
+	backdrop-filter: blur(5px);	
 } 
 
 .seccion-noticias{
@@ -195,3 +195,58 @@ nav li:hover:before, nav li:focus:before {
 .romper-float {
 	clear: both;
 }
+
+/* area decontacto */
+
+.contenedor-contacto{
+	width: 100%;
+	height: 650px;
+	background: url(../imagenes/fondo_contacto.svg);
+	background-size: cover;
+}
+
+.form{
+	width: 30%;
+	float: right;
+	margin-top: 50px;
+	margin-right: 15%;
+}
+
+.nombre-formulario{
+	display: block;
+	color: black;
+	font-weight: bolder;
+}
+
+.entrada-formulario{
+	background-color: faedfd;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #dfc9c3;
+	width: 94%;
+	padding: 12px;
+	margin-bottom: 20px;
+	border-radius: 0px 0px 10px 10px;
+}
+
+textarea{
+	min-width: 94%;
+	max-width: 94%;
+	max-height: 40px;
+	min-height: 20px;
+}
+
+.boton-formulario{
+	outline: none;
+	background: #c6aca5;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	width: 100%;
+	border-radius: 0px 0px 10px 10px;
+	font-weight: bolder;
+	font-size: large;
+}
+
+/* estilos del pie de la pagina */
+
