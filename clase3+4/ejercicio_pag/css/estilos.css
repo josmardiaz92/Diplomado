@@ -35,6 +35,8 @@ header {
 	background-image: url(../imagenes/fondo_head.svg);
 	border-bottom: 3px inset #fe13a3;
 	font-weight: bold;
+	position: fixed;
+	z-index: 2;
 }
 
 nav ul{
@@ -58,7 +60,7 @@ nav ul a{
 .borde-imagen {
 	width: 100%;
 	background-color: #9FC7AA;
-	padding: 1.5% 0%;
+	padding: 2% 0% 1.5% 0%;
 }
 
 /* lo siguiente es para la animacion de los links */
