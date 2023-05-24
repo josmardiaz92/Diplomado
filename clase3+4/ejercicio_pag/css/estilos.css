@@ -293,6 +293,14 @@ figure{
 	border-radius: 30px;
 }
 
+.redes-sociales:hover {
+	background-color: #FF0072;
+	color: white;
+	width: 35px;
+	height: 35px;
+	transition: all .5s ease-in-out;
+}
+
 .pie-pagina-copyright{
 	background-color: #FF0072;
 	color: #000000;
