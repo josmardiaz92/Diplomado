@@ -136,6 +136,13 @@ nav li:hover:before, nav li:focus:before {
 
   /* en el boton de contcato */
 
+  .boton-formulario:hover {
+	background-color: #FF0072;
+	color: white;
+  }
+
+
+
 /* estilos de laseccion de noticias */
 
 .titulo-seccion{
@@ -238,6 +245,7 @@ textarea{
 
 .boton-formulario{
 	outline: none;
+	transition: background-color .5s ease-in-out;
 	background: #c6aca5;
 	border: none;
 	padding: 10px;
@@ -249,4 +257,49 @@ textarea{
 }
 
 /* estilos del pie de la pagina */
+
+.logo-pie { 
+	width: 210px;
+}
+
+figure{
+	display: flex;
+	justify-content: center;
+}
+
+.contenedor-pie-pagina{
+	width: 100%;
+	display: grid;
+	grid-template-columns:repeat(3, 1fr); 
+	background-color: #FBECFF;
+}
+
+.pie{
+	width: 89%;
+	padding: 5% 5%;
+}
+
+.pie a { 
+	text-decoration: none;
+}
+
+.redes-sociales { 
+	width: 25px;
+	height: 25px;
+	border: solid 1px #000;
+	padding: 10px;
+	border-radius: 30px;
+}
+
+.pie-pagina-copyright{
+	background-color: #ffbb22;
+	color: #000000;
+	text-align: center;
+	padding: 20px 20px;
+	font-weight: bold;
+}
+
+
+
+
 
