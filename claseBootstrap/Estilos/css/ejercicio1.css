@@ -1,16 +1,14 @@
-#cabecera {
+.cabecera {
     height: 60px;
     background-color: cornflowerblue;
-    text-align: center;
 }
 
-#imagen {
+.imagen {
     height: 600px;
     background-color: darkgray;
-    text-align: center;
 }
 
-#noticia div {
+.noticia div {
     background-color: blue;
 }
 
@@ -21,4 +19,29 @@
 
 .testimonio div div {
     background-color: rgb(90, 91, 89);
+}
+
+.testimonio{
+    background-color: lightgrey;
+    height: 200px;
+}
+
+.columna-testimonio{
+    background-color: grey;
+}
+
+.empresa {
+    background-color: rgb(108, 198, 214);
+}
+
+.empresa div {
+    background-color: blue;
+}
+
+.aliados {
+    background-color: darkgrey;
+}
+
+.aliados div {
+    background-color: dimgrey;
 }
