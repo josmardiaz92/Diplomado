@@ -12,18 +12,9 @@
     background-color: blue;
 }
 
-.testimonio {
-    background-color: darkgray;
-    height: 200px;
-}
-
-.testimonio div div {
-    background-color: rgb(90, 91, 89);
-}
-
 .testimonio{
     background-color: lightgrey;
-    height: 200px;
+    height: 300px;
 }
 
 .columna-testimonio{
