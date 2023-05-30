@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Estilos/css-iconos/css/all.min.css">
     <title>Ejercicio 2</title>
 </head>
 <body> 
@@ -13,92 +14,89 @@
             <div class="col">
                <button class="btn btn-md btn-success" data-bs-toggle="modal" data-bs-target="#ventana-paises">América</button>
                <div class="modal fade" id="ventana-paises" tabindex="-1" data-bs-backdrop="static">
-                    <div class="modal-dialog modal-dialog-scrollabel">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollabel modal-xl">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="col">
-                                    <div class="alert alert-success alert-dismissible fade m-3 p-3 show text-capitalize">
+                            
+                                <div class="col mx-3 mt-3">
+                                    <div class="alert alert-success alert-dismissible fade show text-capitalize">
                                         <h3>paises de américa</h3>
-                                        <button class="btn-close" data-bs-dismiss="alert"></button>    
+                                        <button class="btn-close mt-2 me-2" data-bs-dismiss="alert"></button>
                                     </div>
                                 </div>
-                            </div>
+                            
                             <div class="modal-body">
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover table-bordered text-capitalize">
-                                        <thead class="bg-success text-light">
-                                            <tr>
-                                                <th>nombre</th>
-                                                <th>alias</th>
-                                                <th colspan="2">código telefónico</th>
-                                                <th>continente</th>
-                                                <th>estatus</th>
-                                                <th>acción</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>venezuela</td>
-                                                <td>VE</td>
-                                                <td colspan="2">+58</td>
-                                                <td>América</td>
-                                                <td>activo</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>colombia</td>
-                                                <td>CO</td>
-                                                <td colspan="2">+57</td>
-                                                <td>América</td>
-                                                <td>activo</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>chile</td>
-                                                <td>CL</td>
-                                                <td colspan="2">+56</td>
-                                                <td>América</td>
-                                                <td>activo</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>ecuador</td>
-                                                <td>EC</td>
-                                                <td colspan="2">+593</td>
-                                                <td>América</td>
-                                                <td>activo</td>
-                                                <td></td>
-                                            </tr>
-                                            <tr>
-                                                <td>uruguay</td>
-                                                <td>UY</td>
-                                                <td colspan="2">+598</td>
-                                                <td>América</td>
-                                                <td>activo</td>
-                                                <td></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                        <table class="table table-striped table-hover table-bordered text-capitalize">
+                                            <thead class="bg-success text-light">
+                                                <tr>
+                                                    <th>nombre</th>
+                                                    <th>alias</th>
+                                                    <th colspan="2">código telefónico</th>
+                                                    <th>continente</th>
+                                                    <th>estatus</th>
+                                                    <th>acción</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>venezuela</td>
+                                                    <td>VE</td>
+                                                    <td colspan="2">+58</td>
+                                                    <td>América</td>
+                                                    <td>activo</td>
+                                                    <td class="text-center"><i class="fa-solid fa-eye" style="color: #308d5d;"></i> | <i class="fa-solid fa-pencil" style="color: #308d5d;"></i> | <i class="fa-solid fa-trash" style="color: #308d5d;"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>colombia</td>
+                                                    <td>CO</td>
+                                                    <td colspan="2">+57</td>
+                                                    <td>América</td>
+                                                    <td>activo</td>
+                                                    <td class="text-center"><i class="fa-solid fa-eye" style="color: #308d5d;"></i> | <i class="fa-solid fa-pencil" style="color: #308d5d;"></i> | <i class="fa-solid fa-trash" style="color: #308d5d;"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>chile</td>
+                                                    <td>CL</td>
+                                                    <td colspan="2">+56</td>
+                                                    <td>América</td>
+                                                    <td>activo</td>
+                                                    <td class="text-center"><i class="fa-solid fa-eye" style="color: #308d5d;"></i> | <i class="fa-solid fa-pencil" style="color: #308d5d;"></i> | <i class="fa-solid fa-trash" style="color: #308d5d;"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ecuador</td>
+                                                    <td>EC</td>
+                                                    <td colspan="2">+593</td>
+                                                    <td>América</td>
+                                                    <td>activo</td>
+                                                    <td class="text-center"><i class="fa-solid fa-eye" style="color: #308d5d;"></i> | <i class="fa-solid fa-pencil" style="color: #308d5d;"></i> | <i class="fa-solid fa-trash" style="color: #308d5d;"></i></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>uruguay</td>
+                                                    <td>UY</td>
+                                                    <td colspan="2">+598</td>
+                                                    <td>América</td>
+                                                    <td>activo</td>
+                                                    <td class="text-center"><i class="fa-solid fa-eye" style="color: #308d5d;"></i> | <i class="fa-solid fa-pencil" style="color: #308d5d;"></i> | <i class="fa-solid fa-trash" style="color: #308d5d;"></i></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
 
                                 </div>
-
-
                             </div>
-
-
+                            <div class="modal-footer">
+								<button type="button" class="btn btn-success" data-bs-dismiss="modal">Cerrar</button>
+							</div>
                         </div>
-
 
                     </div>
 
 
+                </div>
 
-               </div>
+
+
             </div>
         </div>
-
-
-
     </div>
 
 
