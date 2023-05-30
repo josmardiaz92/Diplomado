@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ventana Modal</title>
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col">
+				<button class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#ventana-modal-ejemplo">Términos y Condiciones</button>
+				<!-- data-bs-toggle="modal" indica que se ejecutará una ventana modal al dar clic en ese botón -->
+
+				<div class="modal fade" id="ventana-modal-ejemplo" tabindex="-1" data-bs-backdrop="static">
+					<!-- tabindex permite que la ventana modal funcione -->
+					<!-- data-bs-backdrop impide que se cierre el modal dando clic fuera de él -->
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+
+							
+							<div class="modal-header">
+								<h5 class="modal-title">Esto es un ejemplo</h5>
+								<button class="btn-close" data-bs-dismiss="modal"></button>
+							</div>
+
+							
+
+							<div class="modal-body">
+								<div>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam tempora maxime nostrum? Aliquam, quis? Quod architecto voluptatibus blanditiis illum eos quos doloribus laboriosam, molestiae vitae unde. Esse minus necessitatibus dicta similique omnis sit repellendus velit! Nisi, sit molestias neque ab animi placeat voluptates porro fugiat veniam sed at eos dolorem excepturi facere tempore officia asperiores quis eius eligendi. Accusantium, numquam sint harum optio ipsum maxime fuga velit impedit dolorem necessitatibus distinctio, nesciunt reprehenderit. Reprehenderit quos vel tempore consectetur ex delectus ipsa porro similique, eius quo esse distinctio ipsam recusandae nihil maxime quisquam atque repudiandae adipisci unde, incidunt corrupti harum dignissimos! Molestiae rerum doloribus sapiente, eum illum repudiandae harum accusamus odit nulla, animi id enim? Cupiditate, officia non sequi exercitationem dolore saepe asperiores amet repellendus necessitatibus! Architecto libero reprehenderit autem vitae. Hic quos minus mollitia corporis eveniet pariatur odio, laudantium cupiditate dignissimos neque omnis reiciendis! Architecto maiores voluptate repellendus aspernatur temporibus aliquam ea tempore quaerat commodi obcaecati! Odio, cupiditate? Harum explicabo, praesentium vel aliquid quia ipsum debitis assumenda saepe amet atque deleniti fugiat et, corrupti modi maxime dignissimos, dolores reprehenderit. Modi dicta ad ipsum incidunt et consectetur, distinctio odio corrupti facilis beatae id velit omnis minus iste adipisci sequi vitae repellat!
+								</div>
+							</div>
+
+							
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+								<button type="button" class="btn btn-success">Acepto</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

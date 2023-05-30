@@ -8,6 +8,10 @@
     background-color: darkgray;
 }
 
+.noticia {
+    background-color: cornflowerblue;
+}
+
 .noticia div {
     background-color: blue;
 }
@@ -17,7 +21,7 @@
     height: 300px;
 }
 
-.columna-testimonio{
+.col-testimonio{
     background-color: grey;
 }
 
