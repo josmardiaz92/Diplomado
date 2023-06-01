@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox 1</title>
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../Estilos/css/flexbox.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row my-5">
+			<div class="col">
+				<h4>Tipos de Display Flex</h4>
+				<hr>
+				<p><b>d-flex:</b> Es la clase necesaria para comenzar a trabajar con Flexbox, la misma permitirá que los elementos hijos de este contenedor puedan ser acomodados en base a nuestras necesidades en el desarrollo. Este contenedor ocupará el 100% del ancho disponible</p>
+				<div class="fondo-oscuro text-white p-3 d-flex">
+					<p class="mb-0">Display Flex <strong>.d-flex</strong></p>
+				</div>
+				<div class="fondo-oscuro text-white p-3 d-flex">
+					<p class="mb-0">Display Flex <strong>.d-flex</strong></p>
+				</div>
+
+				<br><br>
+				<p><b>d-inline-flex:</b> Esta clase hará que los elementos dentro de este contenedor solo ocupen el espacio que necesitan para mostrar su contenido.</p>
+				<div class="fondo-oscuro text-white p-3 d-inline-flex">
+					<p class="mb-0">Display Inline Flex <strong>.d-inline-flex</strong></p>
+				</div>
+				<div class="fondo-oscuro text-white p-3 d-inline-flex">
+					<p class="mb-0">Display Inline Flex <strong>.d-inline-flex</strong></p>
+				</div>
+				<div class="fondo-oscuro text-white p-3 d-inline-flex">
+					<p class="mb-0">Display Inline Flex <strong>.d-inline-flex</strong></p>
+				</div>
+				<div class="fondo-oscuro text-white p-3 d-inline-flex">
+					<p class="mb-0">Display Inline Flex <strong>.d-inline-flex</strong></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col-12">
+				<h4>Dirección Horizontal:</h4>
+				<hr>
+				<p><b>d-flex flex-row</b></p>
+				<div class="fondo-claro d-flex flex-row ">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+				<br><br>
+				<p><b>d-flex flex-row-reverse</b></p>
+				<div class="fondo-claro d-flex flex-row-reverse">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+			</div>
+		</div>
+		<div class="row my-5">
+			<div class="col-12">
+				<h4>Dirección Vertical:</h4>
+				<hr>
+				<p><b>d-flex flex-column</b></p>
+				<div class="fondo-claro d-flex flex-column">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+				<br><br>
+				<p><b>d-flex flex-column-reverse</b></p>
+				<div class="fondo-claro d-flex flex-column-reverse">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Justifición de Contenido</h4>
+				<hr>
+				<p><b>.justify-content-start</b></p>
+				<div class="fondo-claro d-flex justify-content-start">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+				<br><br>
+				<p><b>.justify-content-center</b></p>
+				<div class="fondo-claro d-flex justify-content-center">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+				<br><br>
+				<p><b>.justify-content-end</b></p>
+				<div class="fondo-claro d-flex justify-content-end">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+				<br><br>
+				<p><b>.justify-content-between</b></p>
+				<div class="fondo-claro d-flex justify-content-between">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+					<div class="fondo-oscuro">Columna Flexible 4</div>
+				</div>
+				<br><br>
+				<p><b>.justify-content-around</b></p>
+				<div class="fondo-claro d-flex justify-content-around">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+					<div class="fondo-oscuro">Columna Flexible 4</div>
+				</div>
+				<br><br>
+				<p><b>.justify-content-evenly</b></p>
+				<div class="fondo-claro d-flex justify-content-evenly">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+					<div class="fondo-oscuro">Columna Flexible 4</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox 3</title>
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../Estilos/css/flexbox.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row my-5">
+			<div class="col">
+				<h4>Wrap</h4>
+				<hr>
+				<p><b>.flex-nowrap:</b> Colocará todos los elementos que estén dentro del contendor dentro de una sola fila</p>
+				<div class="fondo-claro-altura-3 d-flex flex-nowrap">
+					<div class="fondo-oscuro">N°1</div>
+					<div class="fondo-oscuro">N°2</div>
+					<div class="fondo-oscuro">N°3</div>
+					<div class="fondo-oscuro">N°4</div>
+					<div class="fondo-oscuro">N°5</div>
+					<div class="fondo-oscuro">N°6</div>
+					<div class="fondo-oscuro">N°7</div>
+					<div class="fondo-oscuro">N°8</div>
+					<div class="fondo-oscuro">N°9</div>
+					<div class="fondo-oscuro">N°10</div>
+					<div class="fondo-oscuro">N°11</div>
+					<div class="fondo-oscuro">N°12</div>
+					<div class="fondo-oscuro">N°13</div>
+					<div class="fondo-oscuro">N°14</div>
+					<div class="fondo-oscuro">N°15</div>
+					<div class="fondo-oscuro">N°16</div>
+				</div>
+				<br><br>
+				<p><b>.flex-wrap:</b> Colocará todos los elementos que estén dentro del contendor ocupando el espacio que necesitan, pero si ya se ocupó una fila, los demás elementos pasarán a la siguiente fila.</p>
+				<div class="fondo-claro-altura-3 d-flex flex-wrap">
+					<div class="fondo-oscuro">N°1</div>
+					<div class="fondo-oscuro">N°2</div>
+					<div class="fondo-oscuro">N°3</div>
+					<div class="fondo-oscuro">N°4</div>
+					<div class="fondo-oscuro">N°5</div>
+					<div class="fondo-oscuro">N°6</div>
+					<div class="fondo-oscuro">N°7</div>
+					<div class="fondo-oscuro">N°8</div>
+					<div class="fondo-oscuro">N°9</div>
+					<div class="fondo-oscuro">N°10</div>
+					<div class="fondo-oscuro">N°11</div>
+					<div class="fondo-oscuro">N°12</div>
+					<div class="fondo-oscuro">N°13</div>
+					<div class="fondo-oscuro">N°14</div>
+					<div class="fondo-oscuro">N°15</div>
+					<div class="fondo-oscuro">N°16</div>
+				</div>
+				<br><br>
+				<p><b>.flex-wrap-reverse:</b> Colocará todos los elementos que estén dentro del contendor ocupando el espacio que necesitan, pero si ya se ocupó una fila, los demás elementos pasarán una nueva fila que se creará antes de la actual, es decir, arriba.</p>
+				<div class="fondo-claro-altura-3 d-flex flex-wrap-reverse">
+					<div class="fondo-oscuro">N°1</div>
+					<div class="fondo-oscuro">N°2</div>
+					<div class="fondo-oscuro">N°3</div>
+					<div class="fondo-oscuro">N°4</div>
+					<div class="fondo-oscuro">N°5</div>
+					<div class="fondo-oscuro">N°6</div>
+					<div class="fondo-oscuro">N°7</div>
+					<div class="fondo-oscuro">N°8</div>
+					<div class="fondo-oscuro">N°9</div>
+					<div class="fondo-oscuro">N°10</div>
+					<div class="fondo-oscuro">N°11</div>
+					<div class="fondo-oscuro">N°12</div>
+					<div class="fondo-oscuro">N°13</div>
+					<div class="fondo-oscuro">N°14</div>
+					<div class="fondo-oscuro">N°15</div>
+					<div class="fondo-oscuro">N°16</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Ordenamiento de Elementos:</h4>
+				<hr>
+				<div class="fondo-claro-altura-3 d-flex flex-nowrap">
+					<div class="fondo-oscuro order-2">N°1</div>
+					<div class="fondo-oscuro order-3">N°2</div>
+					<div class="fondo-oscuro order-1">N°3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col-12">
+				<h4>Alineación Vertical deL Contenido con Varias Filas:</h4>
+				<hr>
+				<div class="row">
+					<div class="col-4">
+						<p><b>.align-content-start</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-start">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<p><b>.align-content-center</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-center">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<p><b>.align-content-end</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-end">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-5">
+					<div class="col-4">
+						<p><b>.align-content-between</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-between">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<p><b>.align-content-around</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-around">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<p><b>.align-content-stretch</b></p>
+						<div class="fondo-claro-altura-3 d-flex flex-wrap align-content-stretch">
+							<div class="fondo-oscuro">N°1</div>
+							<div class="fondo-oscuro">N°2</div>
+							<div class="fondo-oscuro">N°3</div>
+							<div class="fondo-oscuro">N°4</div>
+							<div class="fondo-oscuro">N°5</div>
+							<div class="fondo-oscuro">N°6</div>
+							<div class="fondo-oscuro">N°7</div>
+							<div class="fondo-oscuro">N°8</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

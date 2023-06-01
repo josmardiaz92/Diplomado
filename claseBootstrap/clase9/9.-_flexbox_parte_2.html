@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox 2</title>
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../Estilos/css/flexbox.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row my-5">
+			<div class="col">
+				<h4>Fill</h4><p>La clase <b class="badge bg-dark">.flex-fill</b> se puede aplicar a cada uno de los elementos hijo de un contenedor <b class="badge bg-secondary">.d-flex</b> y lo que hará es colocar el espacio sobrante de la fila dentro de ese elemento en el cuál sea aplicado el <b class="badge bg-dark">.flex-fill</b>, tomando en cuenta que, si se aplica la misma clase a varios elementos hijos, entonces se distribuirá el espacio sobrante de la fila en cada uno de esos elementos</p>
+				<hr>
+				<div class="fondo-claro-altura d-flex align-items-start">
+					<div class="fondo-oscuro">Columna Flexible</div>
+					<div class="flex-fill fondo-oscuro">Columna Flexible (Flex-Fill)</div>
+					<div class="flex-fill fondo-oscuro">Columna Flexible (Flex-Fill)</div>
+					<div class="flex-fill fondo-oscuro">Columna Flexible (Flex-Fill)</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Alineación Grupal</h4>
+				<hr>
+				<p><b>.align-items-start</b></p>
+				<div class="fondo-claro-altura d-flex align-items-start">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+
+				<br><br>
+				<p><b>.align-items-center</b></p>
+				<div class="fondo-claro-altura d-flex align-items-center">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+
+				<br><br>
+				<p><b>.align-items-end</b></p>
+				<div class="fondo-claro-altura d-flex align-items-end">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+
+				<br><br>
+				<p><b>.align-items-strech</b></p>
+				<div class="fondo-claro-altura d-flex align-items-strech">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Alineación Individual</h4>
+				<hr>
+				<div class="fondo-claro-altura d-flex">
+					<div class="align-self-start fondo-oscuro">.align-self-start</div>
+					<div class="align-self-center fondo-oscuro">.align-self-center</div>
+					<div class="align-self-end fondo-oscuro">.align-self-end</div>
+					<div class="align-self-stretch fondo-oscuro">.align-self-stretch</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row my-5">
+			<div class="col">
+				<h4>Margénes Automáticos</h4>
+				<hr>
+
+				<div class="fondo-claro-altura d-flex justify-content-end">
+					<div class="me-auto fondo-oscuro">.me-auto</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+
+				<div class="fondo-claro-altura d-flex justify-content-start">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="ms-auto fondo-oscuro">.ms-auto</div>
+				</div>
+
+				<div class="fondo-claro-altura d-flex flex-column align-items-start" style="height: 250px;">
+					<div class="mb-auto fondo-oscuro">.mb-auto</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="fondo-oscuro">Columna Flexible 3</div>
+				</div>
+
+				<div class="fondo-claro-altura d-flex flex-column align-items-end" style="height: 250px;">
+					<div class="fondo-oscuro">Columna Flexible 1</div>
+					<div class="fondo-oscuro">Columna Flexible 2</div>
+					<div class="mt-auto fondo-oscuro">.mt-auto</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
