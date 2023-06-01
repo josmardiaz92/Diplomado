@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider</title>
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row m-0">
+			<div class="col">
+				<div class="carousel slide carousel-fade" id="ejemplo-slider" data-bs-ride="carousel">
+					<!-- Imágenes del Slider -->
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<div class="carousel-caption">
+								<h2>Esto es un Slider</h2>
+								<p>Aquí va la descripción de la imagen del Slider.</p>
+							</div>
+							<img class="d-block w-100" src="../Imagen/slider1.jpg">
+						</div>
+						<div class="carousel-item" data-bs-interval="12000">
+							<img class="d-block w-100" src="../Imagen/slider2.jpg">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="../Imagen/slider3.jpg">
+						</div>
+					</div>
+					<!-- Imágenes del Slider -->
+					<!-- Flechas de Navegación -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#ejemplo-slider" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+
+					<button class="carousel-control-next" type="button" data-bs-target="#ejemplo-slider" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+					<!-- Flechas de Navegación -->
+					<!-- Puntos de Navegación -->
+					<div class="carousel-indicators">
+						<button type="button" class="active" data-bs-target="#ejemplo-slider" data-bs-slide-to="0"></button>
+						<button type="button" data-bs-target="#ejemplo-slider" data-bs-slide-to="1"></button>
+						<button type="button" data-bs-target="#ejemplo-slider" data-bs-slide-to="2"></button>
+					</div>
+					<!-- Puntos de Navegación -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
