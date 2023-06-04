@@ -5,31 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
-    <title>Ejercicio 2</title>
+    <title>Ejercicio 4</title>
 </head>
 <body> 
     <div class="toast-container position-absolute p-3" style="top: 0; right: 0;">
-    <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header text-muted">
-            <strong class="me-auto">Nueva Solicitud de Amistad</strong>
-            <small>hace 1 minuto</small>
-            <button type="button" class="btn-close" aria-label="Close"></button>
-        </div>
-        <div class="toast-body d-inline-flex text-muted">
-                <img src="../Imagen/persona.jpg" alt="persona" class="img-card-star img-thumbnail m-2" width="40%">
-                <p class="ms-3 mt-2">Jennifer Pedraza ha solicitado ser tu amiga en esta red social</p>
-        </div>
-        <div class="toast-body text-muted m-0">
-                <div class="d-flex justify-content-center mb-0"><p>Porcentaje de coincidencia en intereses:</p></div>
-                <div class="mt-0">
-                    <div class="progress " style="height: 35px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%;">
+        <div class="toast show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header text-muted">
+                <strong class="me-auto">
+                    Nueva Solicitud de Amistad
+                </strong>
+                <small>
+                    hace 1 minuto
+                </small>
+                <button type="button" class="btn-close" aria-label="Close">
+                </button>
+            </div>
+            <div class="toast-body text-muted p-0">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="../Imagen/persona.jpg" alt="persona" class="img-card-star img-thumbnail m-2" width="100%">
+                        </div>
+                        <div class="col-9">
+                            <p class="ms-3 mt-3">Jennifer Pedraza ha solicitado ser tu amiga en esta red social</p>
+                        </div>
+                    </div>
+                    <div class="row d-flex mt-2">
+                        <div class="col-12">
+                            <strong class="d-flex justify-content-center m-0">Porcentaje de coincidencia en intereses:</strong>
+                            <div class="progress" style="height: 20px;">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: 80%;">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="toast-footer text-muted d-flex justify-content-between m-3">
+                <button class="btn btn-sm btn-success"><strong>Aceptar</strong></button>
+                <button class="btn btn-sm btn-danger"><strong>Ignorar</strong></button>
+            </div>
         </div>
-    </div>
-    
     </div>
 
 
