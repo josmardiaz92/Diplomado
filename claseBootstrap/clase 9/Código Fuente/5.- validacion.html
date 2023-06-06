@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../Estilos/css/bootstrap.min.css">
+	<title>Validación</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-6">
+				<form action="">
+					<label for="nombre" class="form-label">Nombre</label>
+					<input type="text" class="form-control is-valid" placeholder="Nombre" name="nombre" id="nombre">
+					<div class="valid-feedback">¡El nombre ingresado es correcto!</div>
+				</form>
+			</div>
+			<div class="col-6">
+				<form action="">
+					<label for="apellido" class="form-label">Apellido</label>
+					<input type="text" class="form-control is-invalid" placeholder="Apellido" name="apellido" id="apellido">
+					<div class="invalid-feedback">El apellido ingresado es Incorrecto</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script src="../Javascript/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
