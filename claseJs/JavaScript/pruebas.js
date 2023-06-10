@@ -73,20 +73,29 @@ else
 
 //fin
 
+//ingresar notas con numero de estudiantes variable
+
 let estudiantes = parseInt(prompt("Por favor, Indique el numero de estudiantes: "));
 let i;
 let nota;
-let sumatoriaNota;
+let sumatoriaNota = 0;
 let promedio;
+
 
 
 for(i = 0; i<estudiantes; i++) {
     
-    nota = parseInt(prompt("introduzca la nota: "));
+    do
+    {
+        nota = parseInt(prompt("introduzca la nota del 1 al 20: ")); //validación de notas
+    }while(nota < 1 || nota > 20);
+
     sumatoriaNota += nota;
+
 }
 
-promedio = nota/estudiantes;
+promedio = sumatoriaNota/estudiantes;
+
 
 alert("el promedio es: " + promedio);
 
