@@ -11,7 +11,7 @@ while(confirmacion=="s")
     do
     {
         nombreEstudiante=prompt("Ingrese el nombre del estudiante: ","Nombre y Apellido");
-    }while(nombreEstudiante === "Nombre y Apellido");
+    }while(nombreEstudiante.length<1);
 
     do
     {

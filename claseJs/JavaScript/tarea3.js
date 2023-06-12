@@ -12,18 +12,18 @@ do
 
 do
 {
-    nombre=prompt("Ingrese su nombre: ","Nombre y Apellido");
-}while(nombre === "Nombre y Apellido");
+    nombre=prompt("Ingrese su nombre: ");
+}while(nombre.length<1);
 
 do
 {
     cantidadProducto=parseInt(prompt("Ingrese la cantidad de producto que desea llevar: "));
-}while(cantidadProducto <=0);
+}while(isNaN(cantidadProducto) || cantidadProducto <= 0);
 
 do
 {
     precio=parseInt(prompt("Ingrese el precio del producto que desea llevar: "));
-}while(precio <= 0);
+}while(isNaN(precio) || precio <= 0);
 
 totalPagar = cantidadProducto*precio;
 
