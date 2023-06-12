@@ -10,28 +10,28 @@ while(confirmacion=="s")
 {
     do
     {
-        nombreEstudiante=prompt("Ingrese el nombre del estudiante: ","Nombre y Apellido");
+        nombreEstudiante=prompt("Ingrese el nombre del estudiante: ");
     }while(nombreEstudiante.length<1);
 
     do
     {
         nota1 = parseInt(prompt("introduzca la nota de la primera materia del 1 al 20: ")); //validación de notas
-    }while(nota1 < 1 || nota1 > 20);
+    }while((isNaN(nota1) || nota1 < 1) || (isNaN(nota1) || nota1 > 20));
 
     do
     {
         nota2 = parseInt(prompt("introduzca la nota de la segunda materia del 1 al 20: ")); //validación de notas
-    }while(nota2 < 1 || nota2 > 20);
+    }while((isNaN(nota2) || nota2 < 1) || (isNaN(nota2) || nota2 > 20));
 
     do
     {
         nota3 = parseInt(prompt("introduzca la nota de la tercera materia del 1 al 20: ")); //validación de notas
-    }while(nota3 < 1 || nota3 > 20);
+    }while((isNaN(nota3) || nota3 < 1) || (isNaN(nota3) || nota3 > 20));
 
     do
     {
         nota4 = parseInt(prompt("introduzca la nota de la cuarta materia del 1 al 20: ")); //validación de notas
-    }while(nota4 < 1 || nota4 > 20);
+    }while((isNaN(nota4) || nota4 < 1) || (isNaN(nota4) || nota4 > 20));
 
     promedio = (nota1+nota2+nota3+nota4)/4;
 
