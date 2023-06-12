@@ -8,12 +8,12 @@ for(i=0;i<4;i++)
     do
     {
         numero1=parseInt(prompt("Ingrese el primer numero: "));
-    }while(numero1<0);
+    }while(isNaN(numero1) || numero1<0);
     
     do
     {
         numero2=parseInt(prompt("Ingrese el segundo numero: "));
-    }while(numero2<0);
+    }while(isNaN(numero2) || numero2<0);
 
     producto=numero1*numero2;
 
