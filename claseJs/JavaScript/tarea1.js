@@ -5,12 +5,12 @@ let edad = 0;
 do
 {
     añoActual = parseInt(prompt("Ingrese el año actual: ")); //validación 
-}while(añoActual < 2023);
+}while(isNaN(añoActual) || añoActual < 2023);
 
 do
 {
     añoNacimiento = parseInt(prompt("Ingrese su año de nacimiento: ")); //validación 
-}while(añoNacimiento > añoActual);
+}while(isNaN(añoNacimiento) || añoNacimiento > añoActual);
 
 
 edad = añoActual-añoNacimiento;
