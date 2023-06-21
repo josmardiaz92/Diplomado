@@ -11,9 +11,9 @@
 <body>
 	<div class="row m-0 pb-5 pt-5 justify-content-center">
 		<div class="col-8 text-center">
-			<form action="#" method="POST" class="text-center">
+			<form action="#" method="POST" class="text-center" id="miformulario">
 				<div class="sombra bg-azul radio-titulo pt-4 pb-4 text-center">
-					<img src="imagen/logo.png" alt="" width="20%" align="center" class="pt-2 pb-2 ">
+					<img src="imagen/logo.png" alt="" width="20%" align="center" id="imagencabezera" class="pt-2 pb-2 "> <!-- *vamos a tomar el id para llamar lafuncion desde js -->
 				</div>
 				<div class="sombra indigo pt-2 pb-4 text-center">
 					<div class="col-12 text-center pt-3">
@@ -21,12 +21,12 @@
 							<div class="col-md-10 text-center">
 								<div class="row mt-1 mb-1">
 									<div class="col-md-12 col-12 align-self-center text-center">
-										<h2 class="miTitulo">Datos del Cliente</h2>
+										<h2 class="miTitulo" onclick="tocotitulo()">Datos del Cliente</h2> <!-- *de esta manera se llama una function de js desdehtml -->
 									</div>
 								</div>
 								<div class="row mt-4 ml-3">
 									<div class="col-md-4 col-12 align-self-center text-left pt-2">
-										<label for="ide_cli"><b>Identificación:</b></label>
+										<label for="ide_cli" id="identificacion"><b>Identificación:</b></label> <!-- **aca provaremos el addeventlistener -->
 									</div>
 									<div class="col-md-4 col-12">
 										<input type="text" name="ide_cli" id="ide_cli" maxlength="12" class="form-control casilla" placeholder="Cédula del Cliente" title="Inserte la inicial del tipo de documento seguido del número del mismo. Ejemplo: V1234567">
@@ -66,7 +66,7 @@
 									</div>
 									<div class="col-md-4">
 										<input type="text" class="form-control casilla" name="cor_cli" id="cor_cli" placeholder="Dirección de Correo Electrónico" maxlength="126"  title="algo.algo@micorreo.com.aa">
-										<span></span>
+										<span></span> 
 									</div>
 								</div>
 								<hr class="pt-0 mt-2 mb-2 mt-0">
