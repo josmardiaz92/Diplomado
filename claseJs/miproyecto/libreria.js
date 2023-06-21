@@ -1,0 +1,1 @@
+alert('Aqui estamos desde JS');
