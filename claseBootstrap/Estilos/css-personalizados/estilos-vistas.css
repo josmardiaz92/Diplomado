@@ -30,3 +30,12 @@
       background-color: #001A6F;
       color: #ffffff;
     }
+
+    .buscarpalabras {
+      background-image: url(../../Imagen/Sprinkle.svg);
+    }
+
+    .spanbuscador {
+      font-size: large;
+      font-style: oblique;
+    }

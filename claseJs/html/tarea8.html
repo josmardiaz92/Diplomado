@@ -3,21 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../claseBootstrap/Estilos/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../claseBootstrap/Estilos/css-personalizados/estilos-vistas.css">
     <title>Buscar texto</title>
 </head>
-<body>
-    <form action="#" id="formulario">
-        <label for="texto">Escriba un texto: </label>
-        <input type="text" id="texto" name="texto" size="16" maxlength="255" placeholder="Escriba un texto">
-        <hr>
-        <label for="buscar">Que palabra desea buscar</label>
-        <input type="text" id="buscar" name="buscar" size="16" maxlength="255" placeholder="Indique la palabra que desea buscar">
-        <hr>
-        <button type="submit" id="boton">Buscar</button>
-        <hr>
-        <p id="salida"></p>
-    </form>
+<body class="buscarpalabras">
+    <div class="container">
+        <div class="row mt-4 p-3">
+            <form action="#" id="formulario">
+                <div class="row m-3 d-flex justify-content-center align-items-end">
+                    <div class="col-sm-12 col-md-5">
+                        <label class="form-label badge" for="texto">Escriba un texto: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <input class="form-control" type="text" id="texto" name="texto" size="16" maxlength="255" placeholder="Escriba un texto">
+                    </div>
+                </div>
+                <div class="row m-3 d-flex justify-content-center align-items-end">
+                    <div class="col-sm-12 col-md-5">
+                        <label class="form-label badge" for="buscar">Que palabra desea buscar: </label>
+                    </div>
+                    <div class="col-sm-12 col-md-7">
+                        <input class="form-control" type="text" id="buscar" name="buscar" size="27" maxlength="255" placeholder="Indique la palabra que desea buscar">
+                    </div>
+                </div>
+                <div class="row m-3 d-flex justify-content-center">
+                    <div class="col-sm-12 col-md-3 d-flex justify-content-center">
+                        <button type="submit" id="boton" class="btn btn-outline-light">Buscar</button>
+                    </div>
+                </div>
+                <div class="row m-3 d-flex justify-content-center">
+                    <div class="col-12 d-flex justify-content-center badge text-wrap">
+                        <p id="salida"></p>
+                    </div>
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
 
     <script src="../JavaScript/tarea8.js"></script>
+    <script src="../Javascript/js/bootstrap.min.js"></script>
 </body>
 </html>
