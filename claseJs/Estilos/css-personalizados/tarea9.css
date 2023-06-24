@@ -6,6 +6,10 @@
     height: 90px;
 }
 
+input:focus {
+  outline: none;
+}
+
 body {
     background-image: url(../../imagenes/Stock\ Chart.svg);
 }

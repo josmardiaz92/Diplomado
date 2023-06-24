@@ -1,4 +1,5 @@
-let pantalla='';
+let pantallaDatos='';
+let pantallaResultado='';
 const tecla0=document.getElementById('cero');
 const tecla1=document.getElementById('uno');
 const tecla2=document.getElementById('dos');
@@ -60,22 +61,24 @@ function obtenerResultado(operacion)
 
 function agregarElemento(elemento)
 {
-    pantalla=pantalla+elemento;
-    document.getElementById('resultado').value=pantalla;
+    pantallaDatos=pantallaDatos+elemento;
+    document.getElementById('pantalla').value=pantallaDatos;
 }
 function borrarUno()
 {
-    pantalla=pantalla.slice(0,-1);
-    document.getElementById('resultado').value=pantalla;
+    pantallaDatos=pantallaDatos.slice(0,-1);
+    document.getElementById('pantalla').value=pantallaDatos;
 }
 function borrarTodo()
 {
-    pantalla='';
-    document.getElementById('resultado').value=pantalla;
+    pantallaDatos='';
+    pantallaResultado='';
+    document.getElementById('pantalla').value=pantallaDatos;
+    document.getElementById('resultado').value=pantallaResultado;
 }
 function mostrarResultado(resultado)
 {
-    document.getElementById('resultado').value=obtenerResultado(pantalla);
+    document.getElementById('resultado').value=obtenerResultado(pantallaDatos);
 }
 
 tecla0.addEventListener('click', () => {
@@ -133,7 +136,7 @@ teclaE.addEventListener('click', () => {
     agregarElemento('e');
 });
 teclaDarResultado.addEventListener('click', () => {
-    mostrarResultado(pantalla);
+    mostrarResultado(pantallaDatos);
 });
 
 
