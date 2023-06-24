@@ -1,0 +1,42 @@
+.cabecera {
+    height: 60px;
+    background-color: cornflowerblue;
+}
+
+.imagen {
+    height: 600px;
+    background-color: darkgray;
+}
+
+.noticia {
+    background-color: cornflowerblue;
+}
+
+.noticia div {
+    background-color: blue;
+}
+
+.testimonio{
+    background-color: lightgrey;
+    height: 300px;
+}
+
+.col-testimonio{
+    background-color: grey;
+}
+
+.empresa {
+    background-color: rgb(108, 198, 214);
+}
+
+.empresa div {
+    background-color: blue;
+}
+
+.aliados {
+    background-color: darkgrey;
+}
+
+.aliados div {
+    background-color: dimgrey;
+}

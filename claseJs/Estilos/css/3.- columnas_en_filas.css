@@ -1,0 +1,10 @@
+.row {
+    background: blueviolet;
+}
+
+.columna-interna {
+    background: black;
+    color: white;
+    border:3px solid grey;
+    padding: 10px; 
+}

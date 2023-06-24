@@ -1,0 +1,86 @@
+.resultado {
+    height: 100px;
+}
+
+.teclado {
+    height: 90px;
+}
+
+body {
+    background-image: url(../../imagenes/Stock\ Chart.svg);
+}
+
+.tecla {
+    position: relative;
+    height: 100%;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  
+  .tecla:hover {
+    background: rgb(47, 63, 118);
+    box-shadow: 0 0 30px 5px rgba(16, 68, 103, 0.815);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    border-radius: 10px;
+    color: rgb(248, 168, 111);
+    scale: 1.2;
+  }
+  
+  .tecla:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .tecla::before {
+    content: '';
+    /* display: block; */
+    /* width: 0px;
+    height: 86%; */
+    position: absolute;
+    /* top: 7%;
+    left: 0%; */
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .tecla:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  
+   

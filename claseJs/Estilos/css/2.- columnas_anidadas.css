@@ -1,0 +1,17 @@
+.row {
+    background: blueviolet;
+}
+
+.columna-principal {
+    background: black;
+    color: white;
+    text-align: center;
+    border: 3px solid red;
+}
+
+.columna-interna {
+    background: blue;
+    color: white;
+    border:3px solid grey;
+    padding: 10px; 
+}
