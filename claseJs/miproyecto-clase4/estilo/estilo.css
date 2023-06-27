@@ -84,3 +84,14 @@ border-bottom: solid 5px #fc5c04;
   font-size: 15px;
   
 }
+
+.invalida{
+border: solid 1px red;
+box-shadow: 0 0 10px red;
+}
+
+.error{
+color:red;
+display:block;
+}
+  
