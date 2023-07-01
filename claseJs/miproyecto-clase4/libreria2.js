@@ -329,4 +329,5 @@ elementoStatus.addEventListener("blur", function(evento){
             }
     }
 });
-    
+
+
