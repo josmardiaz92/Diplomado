@@ -1,5 +1,5 @@
 //TODO Toma de los elementos mediante la clase
-const elementos=document.querySelectorAll('.form-control');
+const elementos=document.querySelectorAll('.validar');
 
 //TODO Aca se agregan las expresiones regulares, se hace en una lista y se coloca como propiedad el id de los elementos
 const expresionesRegulares = {
@@ -28,7 +28,6 @@ elementos.forEach(elemento=>{
         const valor=campo.value;
         const id=campo.id;
         const Regexp=expresionesRegulares[id];
-        console.log(Regexp);
         if(valor.length===0){
             campo.classList.remove("casilla");
             campo.classList.add("is-invalid");

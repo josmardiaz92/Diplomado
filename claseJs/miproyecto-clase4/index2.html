@@ -29,7 +29,7 @@
 										<label class="form-label" for="ide_cli"><b>Identificación:</b></label>
 									</div>
 									<div class="col-md-4 col-12">
-										<input type="text" name="ide_cli" id="ide_cli" maxlength="12" class="form-control casilla" placeholder="Cédula del Cliente" title="Inserte la inicial del tipo de documento seguido del número del mismo. Ejemplo: V1234567" required>
+										<input type="text" name="ide_cli" id="ide_cli" maxlength="12" class="form-control validar casilla" placeholder="Cédula del Cliente" title="Inserte la inicial del tipo de documento seguido del número del mismo. Ejemplo: V1234567" required>
 										<span></span>
 									</div>
 								</div>
@@ -39,7 +39,7 @@
 										<label class="form-label" for="raz_cli"><b>Razón Social:</b></label>
 									</div>
 									<div class="col-md-8 col-12">
-										<input type="text" name="raz_cli" id="raz_cli" maxlength="80" class="form-control casilla" placeholder="Nombre del Cliente" title="Solo Letras" required>
+										<input type="text" name="raz_cli" id="raz_cli" maxlength="80" class="form-control validar casilla" placeholder="Nombre del Cliente" title="Solo Letras" required>
 										<span></span>
 									</div>
 								</div>
@@ -49,7 +49,7 @@
 										<label class="form-label" for="dir_cli"><b>Dirección:</b></label>
 									</div>
 									<div class="col-md-6">
-										<textarea name="dir_cli" id="dir_cli" class="form-control casilla" rows="3" maxlength="100" placeholder="Dirección del Cliente" required></textarea>
+										<textarea name="dir_cli" id="dir_cli" class="form-control validar casilla" rows="3" maxlength="100" placeholder="Dirección del Cliente" required></textarea>
 										<span></span>
 									</div>
 								</div>
@@ -59,7 +59,7 @@
 										<label class="form-label" for="tel_cli"><b>Teléfono:</b></label>
 									</div>
 									<div class="col-md-4">
-										<input type="text" class="form-control casilla" name="tel_cli" id="tel_cli" placeholder="Número Telefónico Principal" maxlength="12"  title="Solo Números" required>
+										<input type="text" class="form-control validar casilla" name="tel_cli" id="tel_cli" placeholder="Número Telefónico Principal" maxlength="12"  title="Solo Números" required>
                                         <span></span>
 									</div>
 								</div>
@@ -69,7 +69,7 @@
 										<label class="form-label" for="cor_cli" class="form-label"><b>Correo:</b></label>
 									</div>
 									<div class="col-md-4">
-										<input type="text" class="form-control casilla" name="cor_cli" id="cor_cli" placeholder="Dirección de Correo Electrónico" maxlength="126"  title="algo.algo@micorreo.com.aa" required>
+										<input type="text" class="form-control validar casilla" name="cor_cli" id="cor_cli" placeholder="Dirección de Correo Electrónico" maxlength="126"  title="algo.algo@micorreo.com.aa" required>
 										<span></span> 
 									</div>
 								</div>
@@ -79,7 +79,7 @@
 										<label class="form-label" for="est_cli"><b>Estatus:</b></label>
 									</div>
 									<div class="col-md-4 col-12">
-										<select name="est_cli" id="est_cli" class="form-select casilla" aria-label="select example" required>
+										<select name="est_cli" id="est_cli" class="form-select validar casilla" aria-label="select example" required>
 											<option value="">Seleccione...</option>
 											<option value="A">Activo</option>
 											<option value="I">Inactivo</option>
