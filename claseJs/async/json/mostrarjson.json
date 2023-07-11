@@ -1,0 +1,29 @@
+{
+    "cedula": "30159753",
+    "apellido": "Urdaneta",
+    "nombre": "Francisco",
+    "hobbies": ["comer","bailar","dormir"],
+    "edad": 18,
+    "notas": [
+        {"asignatura": "matematica",
+        "nota": 18
+        },
+        {"asignatura": "fisica",
+        "nota": 15
+        },
+        {"asignatura": "quimica",
+        "nota": 16
+        },
+        {"asignatura": "programacion",
+        "nota": 20
+        }],
+    "direccion": {
+    "pais": "venezuela",
+    "estado": "zulia",
+    "ciudad": "machiques",
+    "municipio": "san felix",
+    "parroquia": "las adjuntas",
+    "calle": "Av, Urdaneta",
+    "casa": "# 4-88"
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../Estilos/css/bootstrap.min.css">
+    <title>Json</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row mt-4 d-flex justify-content-center">
+            <div class="col-7 text-center">
+                <h1>Datos Del estudiante</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row d-flex justify-content-evenly mt-4">
+            <div class="col-3 d-flex justify-content-center">
+                <p class="align-self-end">Nombre:</p>
+                <input class="text-center align-self-start mx-3" type="text" id="nombre">
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <p class="align-self-end">Apeliido:</p>
+                <input class="text-center align-self-start mx-3" type="text" id="apellido">
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <p class="align-self-end">Cédula:</p>
+                <input class="text-center align-self-start mx-3" type="text" id="cedula">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly mt-4">
+            <div class="col d-flex justify-content-center">
+                <p class="align-self-end">Dirección:</p>
+                <input class="text-center align-self-start mx-3" type="text" id="direccion" size="100">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly mt-4">
+            <div class="col d-flex justify-content-center">
+                <p class="align-self-end">Hobbies:</p>
+                <input class="text-center align-self-start mx-3" type="text" id="hobbies" size="100">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly mt-4">
+            <div class="col d-flex justify-content-center">
+                <p class="align-self-end">Materias:</p>
+                <select name="materia" id="asignatura" class="form-control align-self-start mx-3">
+                    <option value="">Seleccione...</option>
+                </select>
+                <span id="span"></span>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly mt-4">
+            <div class="col d-flex justify-content-center">
+                <img src="" alt="" srcset="" id="imagen">
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="../js/mostrarjson.js"></script>
+</body>
+</html>
