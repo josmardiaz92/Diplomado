@@ -8,6 +8,7 @@ const marvel={
             .then((json)=>{
                 console.log(json, 'res.json')
             })
+        .catch(error =>{console.error(error)})
     }
 };
 marvel.consulta()
