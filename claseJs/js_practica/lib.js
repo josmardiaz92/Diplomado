@@ -1,0 +1,1 @@
+alert('Dashboard con JS');

@@ -6,7 +6,7 @@ const marvel={
 
         fetch(urlAPI)
             .then(res=>res.json())
-            .then((json)=>{
+            .then(json=>{
                 console.log(json)
                 json.data.results.forEach(hero => {
                     contenHTML+=` 
