@@ -2,7 +2,6 @@ let url='https://randomfox.ca/floof/';
 let contenidoHTML=``;
 
 
-
 fetch(url)
     .then(respuesta=>respuesta.json())
     .then(zorra=>{
