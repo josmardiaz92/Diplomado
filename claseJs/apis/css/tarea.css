@@ -24,7 +24,7 @@
 }
 
 .img:hover {
-    height: auto;
+    height: 400px;
     flex: 3;
     cursor: pointer;
 }
