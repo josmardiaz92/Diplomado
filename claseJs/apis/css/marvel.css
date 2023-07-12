@@ -1,0 +1,7 @@
+.list:hover img:not(:hover){
+    filter: blur(20px);
+}
+
+body {
+    background-color: black;
+}
