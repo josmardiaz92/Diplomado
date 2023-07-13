@@ -1,36 +1,27 @@
-let url='https://randomfox.ca/floof/';
-let contenidoHTML=``;
+const url = 'https://randomfox.ca/floof/';
 
+const elementosZorra = [zorra1, zorra2, zorra3, zorra4, zorra5]; // Asegúrate de que los elementos existan y estén correctamente referenciados
 
-fetch(url)
-    .then(respuesta=>respuesta.json())
-    .then(zorra=>{
-        zorra1.src=zorra.image
+elementosZorra.forEach((elemento, index) => {
+    fetch(url)
+    .then(respuesta => respuesta.json())
+    .then(zorra => {
+        elemento.src = zorra.image;
     });
-fetch(url)
-    .then(respuesta=>respuesta.json())
-    .then(zorra=>{
-        zorra2.src=zorra.image
-    });
-fetch(url)
-    .then(respuesta=>respuesta.json())
-    .then(zorra=>{
-        zorra3.src=zorra.image
-    });
-fetch(url)
-    .then(respuesta=>respuesta.json())
-    .then(zorra=>{
-        zorra4.src=zorra.image
-    });
-fetch(url)
-    .then(respuesta=>respuesta.json())
-    .then(zorra=>{
-        zorra5.src=zorra.image
-    });
+});
 
-
-
-const recargar=document.getElementById('titulo');
-recargar.addEventListener('click',()=>{
+const recargar = document.getElementById('titulo');
+recargar.addEventListener('click', () => {
     location.reload();
 });
+
+const imagenes=document.querySelectorAll('.zzz');
+imagenes.forEach(Element=>{
+    Element.addEventListener('click',()=>{
+        fetch(url)
+        .then(respuesta => respuesta.json())
+        .then(zorra => {
+        Element.src = zorra.image;
+    });
+    })
+})

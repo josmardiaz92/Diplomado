@@ -29,3 +29,6 @@
     cursor: pointer;
 }
 
+.galeria:hover div:not(:hover){
+    filter: blur(20px);
+}
