@@ -1,8 +1,5 @@
 const urlAPI="https://gateway.marvel.com:443/v1/public/characters?ts=1689204428433&apikey=f4a0f8c6d2dfc289a81abbcebc496e21&hash=fdbe7046ba2d431a2cbbf5b11be62df9";
 let contenHTML='';
-var timestamp = new Date().getTime();
-console.log(timestamp);
-
 fetch(urlAPI)
     .then(res=>res.json())
     .then(json=>{
