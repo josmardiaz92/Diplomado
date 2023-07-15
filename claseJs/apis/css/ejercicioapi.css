@@ -1,0 +1,4 @@
+/* Estilo personalizado para el cursor de carga */
+.loading-cursor {
+    cursor: wait;
+}
