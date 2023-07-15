@@ -1,7 +1,62 @@
-.list:hover img:not(:hover){
+.list:hover .card:not(:hover){
     filter: blur(20px);
 }
 
 body {
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    min-height: 100vh;
 }
+
+.card {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    position: relative;
+    transition: 600ms ease;
+}
+
+.card img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card-body {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    z-index: -1;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 300ms ease;
+}
+
+.card:hover {
+    transform: scale(1.8);
+    z-index: 2;
+}
+
+.card:hover img {
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 100ms ease; /* Transición suave */
+}
+
+.card:hover .card-body {
+    z-index: 1;
+    height: auto;
+    opacity: 1; /* Mostrar en hover */
+}
+
+.card-title {
+    color: #e74c3c;
+    letter-spacing: 1px;
+}
+
+.card-text {
+    line-height: 1.4;
+    font-size: x-small;
+}
+
