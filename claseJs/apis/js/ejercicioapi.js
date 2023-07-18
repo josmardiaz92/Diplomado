@@ -16,6 +16,8 @@ document.body.classList.add('loading-cursor');
         
             if(valor!==''){
                 urlBuscar=urlAPI+'/?name='+valor;
+                marioCards.innerHTML='';
+                start=0;
                 loadMoreContent();
             }
 })
