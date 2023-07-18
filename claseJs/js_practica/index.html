@@ -4,16 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard con JS</title>
-    <link rel="stylesheet" href="/bootstrap-5.3.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="row text-center">
         <h1>Dashboard con JS</h1>
     </div>
     <div class="container">
-        <canvas id="g1" class="card-img-top"></canvas>               
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card">
+                    <canvas id="g1" class="card-img-top"></canvas>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Producción General
+                        </h5>
+                        <p class="card-text">
+                            Variación en la producción de laempresa en cuanto a las diferentes ordenes generales a los clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <canvas id="g2" class="card-img-top"></canvas>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            Fabricación por tipo de Producto
+                        </h5>
+                        <p class="card-text">
+                            Comportamiento en la salida de productos fabricados por tipo en diferentes semanas
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <canvas id="g3" class="card-img-top"></canvas>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Distribución de la mercancía</h5>
+                        <p class="card-text">Distribución de laproducción según la cadena y ubicación (local, regional, nacional o internacional)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <canvas id="g4" class="card-img-top"></canvas>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">'Materia prima</h5>
+                        <p class="card-text">Ingresos y consumos de materia prima según tipo asignado a laproducción específica de los diferentes confeccionados de la Empresa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="/bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.0-dist/js/bootstrap.min.js"></script>
     <script src="Chart.js_4.3.0_chart.min.js"></script>
     <script src="lib.js"></script>  
 </body>
