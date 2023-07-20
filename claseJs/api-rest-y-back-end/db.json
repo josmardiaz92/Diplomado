@@ -1,0 +1,69 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "descripcion": "Papa Criolla",
+      "precio": 1850.45,
+      "tipoId": 1
+    },
+    {
+      "id": 2,
+      "descripcion": "Apio",
+      "precio": 2000,
+      "tipoId": 1
+    },
+    {
+      "id": 3,
+      "descripcion": "Remolacha",
+      "precio": 1599.99,
+      "tipoId": 1
+    },
+    {
+      "id": 4,
+      "descripcion": "Platano Maduro",
+      "precio": 3456.99,
+      "tipoId": 1
+    },
+    {
+      "id": 5,
+      "descripcion": "Melón",
+      "precio": 1978.34,
+      "tipoId": 2
+    },
+    {
+      "id": 6,
+      "descripcion": "Patilla",
+      "precio": 2000,
+      "tipoId": 2
+    },
+    {
+      "id": 7,
+      "descripcion": "Ajo",
+      "precio": 890,
+      "tipoId": 3
+    },
+    {
+      "id": 8,
+      "descripcion": "Pimienta",
+      "precio": 999.76,
+      "tipoId": 3
+    }
+  ],
+  "tipos": [
+    {
+      "id": 1,
+      "descripcion": "Verduras",
+      "temporada": "de enero a diciembre"
+    },
+    {
+      "id": 2,
+      "descripcion": "Frutas",
+      "temporada": "por temporadas especificas"
+    },
+    {
+      "id": 3,
+      "descripcion": "Condimentos",
+      "temporada": "de enero a diciembre"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "api-rest-y-back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server":"json-server --watch db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.17.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}
