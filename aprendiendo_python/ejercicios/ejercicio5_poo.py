@@ -12,7 +12,7 @@ class pais:
         self.est_pai=est_pai
     def agregar_pais(self):
         agregar=f"""INSERT INTO ubicacion.pais 
-            (cod_pai,nom_pai,des_pai,ali_pai,cti_pai,fky_pai,est_pai) 
+            (nom_pai,des_pai,ali_pai,cti_pai,fky_pai,est_pai) 
             VALUES
             ('{self.nom_pai}','{self.des_pai}','{self.ali_pai}','{self.cti_pai}',{self.fky_con},'{self.est_pai}');"""
         print('Voy a hacer lo siguiente:')
