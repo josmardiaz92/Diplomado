@@ -11,9 +11,10 @@ router.get('/',(request,response)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
-            response.send(results); //*envia los resultados por consola
+            //response.send(results); //*envia los resultados por consola
+            response.render('index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
         }
-    })
+    });
 });
 
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app
