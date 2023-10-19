@@ -11,9 +11,11 @@ app.listen(5050,()=>{
     response.send('<h1>Activo el server...</h1>');
     response.end;
 }); */
+app.use(express.urlencoded({extended:false}));
+app.use(express(express.json));
 
 //*Referenciamos al enrrutador
 app.use('/',require('./router'));
 
 //*invocamos al motor de plantillas de EJS
-app.set('view engine','ejs');
+app.set('view engine','ejs'); 

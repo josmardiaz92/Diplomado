@@ -1,20 +1,21 @@
 const express=require('express'); //*llamamos a express
 const conexion=require('./database/db'); //*agregamos la referencia a la conexion con la bd
 const router=express.Router(); //*invocamos al modulo de enrrutamiento de expressJS
+const crud=require('./controllers/crud');
 
 //*creamos una nueva ruto
 /* router.get('/contacto',(request,response)=>{
     response.send('CONTACTO');
 }); */
-router.get('/zona_horaria',(request,response)=>{
-    /* conexion.query('select * from usuario',(error,results)=>{
+router.get('/',(request,response)=>{
+    conexion.query('select * from usuario',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
             //response.send(results); //*envia los resultados por consola
-            response.render('index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+            response.render('index',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
         }
-    }); */
+    });
     /* conexion.query('select * from continente',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
@@ -47,16 +48,30 @@ router.get('/zona_horaria',(request,response)=>{
             response.render('ciudad/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
         }
     }); */
-    conexion.query('select * from zona_horaria',(error,results)=>{
+    /* conexion.query('select * from zona_horaria',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
             //response.send(results); //*envia los resultados por consola
             response.render('zona_horaria/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
         }
-    });
+    }); */
 
 
 });
-
+router.get('/create',(request,response)=>{
+    response.render('create');
+})
+router.post('/save',crud.save);
+router.get('/edit/:id',(request,response)=>{
+    const id=request.params.id;
+    conexion.query('select * from usuario where id=?',[id],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            response.render('edit',{user:results[0]});
+        }
+    })
+})
+router.post('/update',crud.update);
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app

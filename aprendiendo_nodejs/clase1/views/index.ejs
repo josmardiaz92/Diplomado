@@ -12,7 +12,7 @@
         <title>Sistema</title>
     </hea>
     <body>
-        <div id="navbar">
+        <div id="navbar" class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="/">Sistema</a>
@@ -38,6 +38,11 @@
                             <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="/create" class="btn btn-outline-dark">
+                                <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
+                            </a>
+                        </li>
                         </ul>
                         <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -47,18 +52,11 @@
                     </div>
                 </nav>
         </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <a href="/create" class="btn btn-outline-dark mt-4">
-                    <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
-                </a>
-            </div>
-        </div>
-        <div class="row d-flex justify-content-center" id="containerTabla">
+        <div class="row d-flex justify-content-center w-100" id="containerTabla">
             <div class="col-10">
-                <table class="table table-bordered table-dark table-striped text-center mt-4">
+                <table class="table table-bordered table-light table-striped text-center mt-4">
                     <thead>
-                        <tr class="text-white">
+                        <tr class="text-dark">
                             <th scope="col">ID</th>
                             <th scope="col">USUARIO</th>
                             <th scope="col">ROL</th>
@@ -72,8 +70,8 @@
                                 <td><%=usuario.user%></td>
                                 <td><%=usuario.rol%></td>
                                 <td>
-                                    <a href="/edit/<%=usuario.id%>" class="btn"><i class='bx bx-edit' style='color:#f9f3f3'></i></a>
-                                    <a href="/delete/<%=usuario.id%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f9f3f3' ></i></a>
+                                    <a href="/edit/<%=usuario.id%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
+                                    <a href="/delete/<%=usuario.id%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
                                 </td>
                             </tr>
                         <%})%>
@@ -81,7 +79,7 @@
                 </table>
             </div>
         </div>
-
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>
+
