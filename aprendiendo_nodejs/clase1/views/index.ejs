@@ -29,13 +29,14 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
+                            Ubicacion
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Telefonia</a></li>
-                            <li><a class="dropdown-item" href="#">Redes</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+                            <li><a class="dropdown-item" href="/ciudad_listar">Ciudad</a></li>
+                            <li><a class="dropdown-item" href="/continente_listar">Continente</a></li>
+                            <li><a class="dropdown-item" href="/estado_listar">Estado</a></li>
+                            <li><a class="dropdown-item" href="/pais_listar">País</a></li>
+                            <li><a class="dropdown-item" href="/zona_horaria_listar">Zona Horaria</a></li>
                             </ul>
                         </li>
                         <li>
@@ -71,7 +72,7 @@
                                 <td><%=usuario.rol%></td>
                                 <td>
                                     <a href="/edit/<%=usuario.id%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
-                                    <a href="/delete/<%=usuario.id%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
+                                    <a href="/delete/<%=usuario.id%>" class="btn delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?')"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
                                 </td>
                             </tr>
                         <%})%>

@@ -12,10 +12,10 @@
         <title>estado</title>
     </hea>
     <body>
-        <div id="navbar">
+        <div id="navbar" class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="/">estado</a>
+                    <a class="navbar-brand" href="/">Sistema</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -29,14 +29,20 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Productos
+                            Ubicacion
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Telefonia</a></li>
-                            <li><a class="dropdown-item" href="#">Redes</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+                            <li><a class="dropdown-item" href="/ciudad_listar">Ciudad</a></li>
+                            <li><a class="dropdown-item" href="/continente_listar">Continente</a></li>
+                            <li><a class="dropdown-item" href="/estado_listar">Estado</a></li>
+                            <li><a class="dropdown-item" href="/pais_listar">País</a></li>
+                            <li><a class="dropdown-item" href="/zona_horaria_listar">Zona Horaria</a></li>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="/create" class="btn btn-outline-dark">
+                                <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
+                            </a>
                         </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -47,18 +53,11 @@
                     </div>
                 </nav>
         </div>
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <a href="/create" class="btn btn-outline-dark mt-4">
-                    <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
-                </a>
-            </div>
-        </div>
         <div class="row d-flex justify-content-center" id="containerTabla">
             <div class="col-10">
-                <table class="table table-bordered table-dark table-striped text-center mt-4">
+                <table class="table table-bordered table-light table-striped text-center mt-4">
                     <thead>
-                        <tr class="text-white">
+                        <tr class="text-dark">
                             <th scope="col">ID</th>
                             <th scope="col">NOMBRE</th>
                             <th scope="col">DESCRIPCION</th>
@@ -76,8 +75,8 @@
                                 <td><%=estado.nom_pai%></td>
                                 <td><%=estado.est_est%></td>
                                 <td>
-                                    <a href="/edit/<%=estado.cod_est%>" class="btn"><i class='bx bx-edit' style='color:#f9f3f3'></i></a>
-                                    <a href="/delete/<%=estado.cod_est%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f9f3f3' ></i></a>
+                                    <a href="/edit/<%=estado.cod_est%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
+                                    <a href="/delete/<%=estado.cod_est%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
                                 </td>
                             </tr>
                         <%})%>

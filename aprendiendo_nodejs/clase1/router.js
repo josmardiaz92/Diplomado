@@ -12,52 +12,9 @@ router.get('/',(request,response)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
-            //response.send(results); //*envia los resultados por consola
             response.render('index',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
         }
     });
-    /* conexion.query('select * from continente',(error,results)=>{
-        if(error){
-            throw error; //muestra el error por consola
-        }else{
-            //response.send(results); //*envia los resultados por consola
-            response.render('continente/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
-        }
-    }); */
-    /* conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con',(error,results)=>{
-        if(error){
-            throw error; //muestra el error por consola
-        }else{
-            //response.send(results); //*envia los resultados por consola
-            response.render('pais/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
-        }
-    }); */
-    /* conexion.query('select e.*, p.nom_pai  from estado as e inner join pais as p on e.fky_pai=p.cod_pai',(error,results)=>{
-        if(error){
-            throw error; //muestra el error por consola
-        }else{
-            //response.send(results); //*envia los resultados por consola
-            response.render('estado/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
-        }
-    }); */
-    /* conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon',(error,results)=>{
-        if(error){
-            throw error; //muestra el error por consola
-        }else{
-            //response.send(results); //*envia los resultados por consola
-            response.render('ciudad/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
-        }
-    }); */
-    /* conexion.query('select * from zona_horaria',(error,results)=>{
-        if(error){
-            throw error; //muestra el error por consola
-        }else{
-            //response.send(results); //*envia los resultados por consola
-            response.render('zona_horaria/index.ejs',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
-        }
-    }); */
-
-
 });
 router.get('/create',(request,response)=>{
     response.render('create');
@@ -74,4 +31,51 @@ router.get('/edit/:id',(request,response)=>{
     })
 })
 router.post('/update',crud.update);
+router.get('/delete/:id',crud.delete);
+router.get('/ciudad_listar',(request,response)=>{
+    conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon',(error,results)=>{
+        if(error){
+            throw error; //muestra el error por consola
+        }else{
+            response.render('ciudad_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+        }
+    });
+});
+router.get('/continente_listar',(request,response)=>{
+    conexion.query('select * from continente',(error,results)=>{
+            if(error){
+                throw error; //muestra el error por consola
+            }else{
+                response.render('continente_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+            }
+        });
+});
+router.get('/estado_listar',(request,response)=>{
+    conexion.query('select e.*, p.nom_pai  from estado as e inner join pais as p on e.fky_pai=p.cod_pai',(error,results)=>{
+        if(error){
+            throw error; //muestra el error por consola
+        }else{
+            response.render('estado_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+        }
+    });
+});
+router.get('/pais_listar',(request,response)=>{
+    conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con',(error,results)=>{
+        if(error){
+            throw error; //muestra el error por consola
+        }else{
+            response.render('pais_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+        }
+    });
+});
+router.get('/zona_horaria_listar',(request,response)=>{
+    conexion.query('select * from zona_horaria',(error,results)=>{
+        if(error){
+            throw error; //muestra el error por consola
+        }else{
+            response.render('zona_horaria_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+        }
+    });
+});
+
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app
