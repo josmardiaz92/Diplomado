@@ -9,7 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>zona horaria</title>
+        <title>Agregar Zona Horaria</title>
     </hea>
     <body>
         <div id="navbar" class="sticky-top">
@@ -39,11 +39,6 @@
                             <li><a class="dropdown-item" href="/zona_horaria_listar">Zona Horaria</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="/zona_horaria_agregar" class="btn btn-outline-dark">
-                                <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
-                            </a>
-                        </li>
                         </ul>
                         <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
@@ -53,35 +48,34 @@
                     </div>
                 </nav>
         </div>
-        <div class="row d-flex justify-content-center" id="containerTabla">
+        <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
             <div class="col-10">
-                <table class="table table-bordered table-light table-striped text-center mt-4">
-                    <thead>
-                        <tr class="text-dark">
-                            <th scope="col">ID</th>
-                            <th scope="col">NOMBRE</th>
-                            <th scope="col">ACRONIMO</th>
-                            <th scope="col" class="col-2">DIFERENCIA HORARIA</th>
-                            <th scope="col">ESTADO</th>
-                            <th scope="col">ACCIONES</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <%results.forEach((zona_horaria)=>{%>
-                            <tr>
-                                <td><%=zona_horaria.cod_zon%></td>
-                                <td><%=zona_horaria.nom_zon%></td>
-                                <td><%=zona_horaria.acr_zon%></td>
-                                <td><%=zona_horaria.dif_zon%> horas</td>
-                                <td><%=zona_horaria.est_zon%></td>
-                                <td>
-                                    <a href="/zona_horaria_editar/<%=zona_horaria.cod_zon%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
-                                    <a href="/delete/<%=zona_horaria.cod_zon%>&zona_horaria" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' onclick="return confirm('¿Estás seguro de que deseas eliminar esta zona horaria?')" ></i></a>
-                                </td>
-                            </tr>
-                        <%})%>
-                    </tbody>
-                </table>
+                <h5>Nueva Zona Horaria</h5>
+                <form action="/save" method="post" class="mt-4">
+                    <input hidden id="identificador" name="identificador" value="zona_horaria">
+                    <div class="mb-3">
+                        <label for="nom_zon" class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" id="nom_zon" name="nom_zon" tabindex="1" placeholder="Nombre de la Zona Horaria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="acr_zon" class="form-label">Acrónimo: </label>
+                        <input type="text" class="form-control" id="acr_zon" name="acr_zon" tabindex="1" placeholder="Acrónimo de la Zona Horaria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dif_zon" class="form-label">Diferencia Horaria: </label>
+                        <input type="number" class="form-control" id="dif_zon" name="dif_zon" tabindex="1" placeholder="Diferencia Horaria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="est_zon" class="form-label">Estado: </label>
+                        <select id="est_zon" name="est_zon" class="form-select" tabindex="3" required>
+                            <option value="">Seleccione...</option>
+                            <option value="A">Activo</option>
+                            <option value="I">Inactivo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                    <a href="/" class="btn border border-secondary">cancelar</a>
+                </form>
             </div>
         </div>
 

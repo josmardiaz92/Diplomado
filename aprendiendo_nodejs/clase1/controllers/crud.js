@@ -30,6 +30,46 @@ exports.save=(request,response)=>{
                 }
             });
             break;
+        case 'estado':
+            const nom_est=request.body.nom_est;
+            const des_est=request.body.des_est;
+            const fky_pai=request.body.fky_pai;
+            const est_est=request.body.est_est;
+            conexion.query('insert into estado set ?',{nom_est:nom_est,des_est:des_est,fky_pai:fky_pai,est_est:est_est},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/estado_listar');
+                }
+            });
+            break;
+        case 'ciudad':
+            const nom_ciu=request.body.nom_ciu;
+            const des_ciu=request.body.des_ciu;
+            const fky_est=request.body.fky_est;
+            const fky_zon=request.body.fky_zon;
+            const est_ciu=request.body.est_ciu;
+            conexion.query('insert into ciudad set ?',{nom_ciu:nom_ciu,des_ciu:des_ciu,fky_est:fky_est,fky_zon:fky_zon,est_ciu:est_ciu},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/ciudad_listar');
+                }
+            });
+            break;
+        case 'zona_horaria':
+            const nom_zon=request.body.nom_zon;
+            const acr_zon=request.body.acr_zon;
+            const dif_zon=request.body.dif_zon;
+            const est_zon=request.body.est_zon;
+            conexion.query('insert into zona_horaria set ?',{nom_zon:nom_zon,acr_zon:acr_zon,dif_zon:dif_zon,est_zon:est_zon},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/zona_horaria_listar');
+                }
+            });
+            break;
         case 'usuario':
             const user=request.body.user;
             const rol=request.body.rol;
@@ -78,6 +118,49 @@ exports.update=(request,response)=>{
                 }
             });
             break;
+        case 'estado':
+            const cod_est=request.body.cod_est;
+            const nom_est=request.body.nom_est;
+            const des_est=request.body.des_est;
+            const fky_pai=request.body.fky_pai;
+            const est_est=request.body.est_est;
+            conexion.query('update estado set ? where cod_est=?',[{nom_est:nom_est,des_est:des_est,fky_pai:fky_pai,est_est:est_est},cod_est],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/estado_listar');
+                }
+            });
+            break;
+        case 'ciudad':
+            const cod_ciu=request.body.cod_ciu;
+            const nom_ciu=request.body.nom_ciu;
+            const des_ciu=request.body.des_ciu;
+            const fky_est=request.body.fky_est;
+            const fky_zon=request.body.fky_zon;
+            const est_ciu=request.body.est_ciu;
+            conexion.query('update ciudad set ? where cod_ciu=?',[{nom_ciu:nom_ciu,des_ciu:des_ciu,fky_est:fky_est,fky_zon:fky_zon,est_ciu:est_ciu},cod_ciu],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/ciudad_listar');
+                }
+            });
+            break;
+        case 'zona_horaria':
+            const cod_zon=request.body.cod_zon;
+            const nom_zon=request.body.nom_zon;
+            const acr_zon=request.body.acr_zon;
+            const dif_zon=request.body.dif_zon;
+            const est_zon=request.body.est_zon;
+            conexion.query('update zona_horaria set ? where cod_zon=?',[{nom_zon:nom_zon,acr_zon:acr_zon,dif_zon:dif_zon,est_zon:est_zon},cod_zon],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/zona_horaria_listar');
+                }
+            });
+            break;
     case 'usuario':
         const id=request.body.id;
         const user=request.body.user;
@@ -114,6 +197,33 @@ exports.delete=(request,response)=>{
                     console.log(error);
                 }else{
                     response.redirect('/pais_listar');
+                }
+            })
+            break;
+        case 'estado':
+            conexion.query('delete from estado where cod_est=?',[id],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/estado_listar');
+                }
+            })
+            break;
+        case 'ciudad':
+            conexion.query('delete from ciudad where cod_ciu=?',[id],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/ciudad_listar');
+                }
+            })
+            break;
+        case 'zona_horaria':
+            conexion.query('delete from zona_horaria where cod_zon=?',[id],(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/zona_horaria_listar');
                 }
             })
             break;

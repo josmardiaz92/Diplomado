@@ -33,7 +33,7 @@ router.get('/edit/:id',(request,response)=>{
 router.post('/update',crud.update);
 router.get('/delete/:id&:ident',crud.delete);
 router.get('/ciudad_listar',(request,response)=>{
-    conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon',(error,results)=>{
+    conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon order by cod_ciu',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
@@ -42,7 +42,7 @@ router.get('/ciudad_listar',(request,response)=>{
     });
 });
 router.get('/continente_listar',(request,response)=>{
-    conexion.query('select * from continente',(error,results)=>{
+    conexion.query('select * from continente order by nom_con',(error,results)=>{
             if(error){
                 throw error; //muestra el error por consola
             }else{
@@ -51,7 +51,7 @@ router.get('/continente_listar',(request,response)=>{
         });
 });
 router.get('/estado_listar',(request,response)=>{
-    conexion.query('select e.*, p.nom_pai  from estado as e inner join pais as p on e.fky_pai=p.cod_pai',(error,results)=>{
+    conexion.query('select e.*, p.nom_pai  from estado as e inner join pais as p on e.fky_pai=p.cod_pai order by nom_est',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
@@ -60,7 +60,7 @@ router.get('/estado_listar',(request,response)=>{
     });
 });
 router.get('/pais_listar',(request,response)=>{
-    conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con order by cod_pai',(error,results)=>{
+    conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con order by nom_pai',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
@@ -69,7 +69,7 @@ router.get('/pais_listar',(request,response)=>{
     });
 });
 router.get('/zona_horaria_listar',(request,response)=>{
-    conexion.query('select * from zona_horaria',(error,results)=>{
+    conexion.query('select * from zona_horaria order by nom_zon',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
@@ -106,9 +106,6 @@ router.get('/pais_editar/:cod_pai',(request,response)=>{
         if(error){
             throw error;
         }else{
-            // Obtiene el valor del fky del registro
-            const cod_con = results[0].cod_con;
-
             // Realiza un select a la tabla continente para obtener todos los posibles valores del fky
             conexion.query('select * from continente',(error,results2)=>{
                 if(error){
@@ -121,5 +118,82 @@ router.get('/pais_editar/:cod_pai',(request,response)=>{
         }
     });
 });
-
+router.get('/estado_agregar',(request,response)=>{
+    conexion.query('select * from pais',(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            response.render('estado_agregar',{results:results}); 
+        }
+    });
+});
+router.get('/estado_editar/:cod_est',(request,response)=>{
+    const cod_est=request.params.cod_est;
+    // Realiza un select a la tabla estado para obtener el registro de la línea 1
+    conexion.query('select * from estado where cod_est=?',[cod_est],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            // Realiza un select a la tabla continente para obtener todos los posibles valores del fky
+            conexion.query('select * from pais',(error,results2)=>{
+                if(error){
+                    throw error;
+                }else{
+                    // Renderiza la página de edición del país, pasando los resultados de ambos selects
+                    response.render('estado_editar',{estado:results[0],paises:results2});
+                }
+            });
+        }
+    });
+});
+router.get('/ciudad_agregar',(request,response)=>{
+    conexion.query('select * from estado',(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            conexion.query('select * from zona_horaria',(error,results2)=>{
+                if(error){
+                    throw error;
+                }else{
+                    response.render('ciudad_agregar',{estados:results,zonas_horarias:results2}); 
+                }
+            });
+        }
+    });
+});
+router.get('/ciudad_editar/:cod_ciu',(request,response)=>{
+    const cod_ciu=request.params.cod_ciu;
+    conexion.query('select * from ciudad where cod_ciu=?',[cod_ciu],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            conexion.query('select * from estado',(error,results2)=>{
+                if(error){
+                    throw error;
+                }else{
+                    conexion.query('select * from zona_horaria',(error,results3)=>{
+                        if(error){
+                            throw error;
+                        }else{
+                            response.render('ciudad_editar',{ciudad:results[0],estados:results2,zonas_horarias:results3});
+                        }
+                    });
+                }
+            });
+        }
+    });
+});
+router.get('/zona_horaria_agregar',(request,response)=>{
+    response.render('zona_horaria_agregar');
+});
+router.get('/zona_horaria_editar/:cod_zon',(request,response)=>{
+    const cod_zon=request.params.cod_zon;
+    conexion.query('select * from zona_horaria where cod_zon=?',[cod_zon],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            response.render('zona_horaria_editar',{zona_horaria:results[0]});
+        }
+    })
+});
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app

@@ -40,7 +40,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/create" class="btn btn-outline-dark">
+                            <a href="/estado_agregar" class="btn btn-outline-dark">
                                 <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
                             </a>
                         </li>
@@ -75,8 +75,8 @@
                                 <td><%=estado.nom_pai%></td>
                                 <td><%=estado.est_est%></td>
                                 <td>
-                                    <a href="/edit/<%=estado.cod_est%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
-                                    <a href="/delete/<%=estado.cod_est%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
+                                    <a href="/estado_editar/<%=estado.cod_est%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
+                                    <a href="/delete/<%=estado.cod_est%>&estado" onclick="return confirm('¿Estás seguro de que deseas eliminar este estado?')" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
                                 </td>
                             </tr>
                         <%})%>

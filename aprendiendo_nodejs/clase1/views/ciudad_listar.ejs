@@ -40,7 +40,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/create" class="btn btn-outline-dark">
+                            <a href="/ciudad_agregar" class="btn btn-outline-dark">
                                 <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
                             </a>
                         </li>
@@ -77,8 +77,8 @@
                                 <td><%=ciudad.nom_zon%></td>
                                 <td><%=ciudad.est_ciu%></td>
                                 <td>
-                                    <a href="/edit/<%=ciudad.cod_ciu%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
-                                    <a href="/delete/<%=ciudad.cod_ciu%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
+                                    <a href="/ciudad_editar/<%=ciudad.cod_ciu%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
+                                    <a href="/delete/<%=ciudad.cod_ciu%>&ciudad" class="btn" onclick="return confirm('¿Estás seguro de que deseas eliminar este continente?')"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
                                 </td>
                             </tr>
                         <%})%>
