@@ -31,7 +31,7 @@ router.get('/edit/:id',(request,response)=>{
     })
 })
 router.post('/update',crud.update);
-router.get('/delete/:id',crud.delete);
+router.get('/delete/:id&:ident',crud.delete);
 router.get('/ciudad_listar',(request,response)=>{
     conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon',(error,results)=>{
         if(error){
@@ -60,7 +60,7 @@ router.get('/estado_listar',(request,response)=>{
     });
 });
 router.get('/pais_listar',(request,response)=>{
-    conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con',(error,results)=>{
+    conexion.query('select p.*, c.nom_con  from pais as p inner join continente as c on p.fky_con=c.cod_con order by cod_pai',(error,results)=>{
         if(error){
             throw error; //muestra el error por consola
         }else{
@@ -74,6 +74,50 @@ router.get('/zona_horaria_listar',(request,response)=>{
             throw error; //muestra el error por consola
         }else{
             response.render('zona_horaria_listar',{results:results}); //*cuando reciba la ruta indicada, lo lleva a index.ejs
+        }
+    });
+});
+router.get('/continente_agregar',(request,response)=>{
+    response.render('continente_agregar');
+});
+router.get('/continente_editar/:cod_con',(request,response)=>{
+    const cod_con=request.params.cod_con;
+    conexion.query('select * from continente where cod_con=?',[cod_con],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            response.render('continente_editar',{continente:results[0]});
+        }
+    })
+});
+router.get('/pais_agregar',(request,response)=>{
+    conexion.query('select * from continente',(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            response.render('pais_agregar',{results:results}); 
+        }
+    });
+});
+router.get('/pais_editar/:cod_pai',(request,response)=>{
+    const cod_pai=request.params.cod_pai;
+    // Realiza un select a la tabla pais para obtener el registro de la línea 1
+    conexion.query('select * from pais where cod_pai=?',[cod_pai],(error,results)=>{
+        if(error){
+            throw error;
+        }else{
+            // Obtiene el valor del fky del registro
+            const cod_con = results[0].cod_con;
+
+            // Realiza un select a la tabla continente para obtener todos los posibles valores del fky
+            conexion.query('select * from continente',(error,results2)=>{
+                if(error){
+                    throw error;
+                }else{
+                    // Renderiza la página de edición del país, pasando los resultados de ambos selects
+                    response.render('pais_editar',{pais:results[0],continentes:results2});
+                }
+            });
         }
     });
 });

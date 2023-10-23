@@ -12,6 +12,7 @@
         <title>continente</title>
     </hea>
     <body>
+        <input type="text" hidden id="identificador" name="identificador" value="continente">
         <div id="navbar" class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -40,7 +41,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="/create" class="btn btn-outline-dark">
+                            <a href="/continente_agregar" class="btn btn-outline-dark">
                                 <i class='bx bxs-plus-square bx-flip-horizontal' ></i>
                             </a>
                         </li>
@@ -73,8 +74,8 @@
                                 <td><%=continente.des_con%></td>
                                 <td><%=continente.est_con%></td>
                                 <td>
-                                    <a href="/edit/<%=continente.cod_con%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
-                                    <a href="/delete/<%=continente.cod_con%>" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' ></i></a>
+                                    <a href="/continente_editar/<%=continente.cod_con%>" class="btn"><i class='bx bx-edit' style='color:#22b7c5'></i></a>
+                                    <a href="/delete/<%=continente.cod_con%>&continente" class="btn"><i class='bx bxs-trash-alt' style='color:#f72727' onclick="return confirm('¿Estás seguro de que deseas eliminar este continente?')"></i></a>
                                 </td>
                             </tr>
                         <%})%>
