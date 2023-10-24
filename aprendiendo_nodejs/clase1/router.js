@@ -196,4 +196,61 @@ router.get('/zona_horaria_editar/:cod_zon',(request,response)=>{
         }
     })
 });
+router.get('/continente_buscar', (request, response) => {
+    const parametro = request.query.buscar;
+    const busqueda = `%${parametro}%`;
+    conexion.query('SELECT * FROM continente WHERE nom_con LIKE ?', [busqueda], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.render('continente_listar', { results: results });
+        }
+    });
+});
+router.get('/pais_buscar', (request, response) => {
+    const parametro = request.query.buscar;
+    const busqueda = `%${parametro}%`;
+    conexion.query('SELECT * FROM pais WHERE nom_pai LIKE ?', [busqueda], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.render('pais_listar', { results: results });
+        }
+    });
+});
+router.get('/estado_buscar', (request, response) => {
+    const parametro = request.query.buscar;
+    const busqueda = `%${parametro}%`;
+    conexion.query('SELECT * FROM estado WHERE nom_est LIKE ?', [busqueda], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.render('estado_listar', { results: results });
+        }
+    });
+});
+router.get('/ciudad_buscar', (request, response) => {
+    const parametro = request.query.buscar;
+    const busqueda = `%${parametro}%`;
+    conexion.query('SELECT * FROM ciudad WHERE nom_ciu LIKE ?', [busqueda], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.render('ciudad_listar', { results: results });
+        }
+    });
+});
+router.get('/zona_horaria_buscar', (request, response) => {
+    const parametro = request.query.buscar;
+    const busqueda = `%${parametro}%`;
+    conexion.query('SELECT * FROM zona_horaria WHERE nom_zon LIKE ?', [busqueda], (error, results) => {
+        if (error) {
+            throw error;
+        } else {
+            response.render('zona_horaria_listar', { results: results });
+        }
+    });
+});
+
+
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app
