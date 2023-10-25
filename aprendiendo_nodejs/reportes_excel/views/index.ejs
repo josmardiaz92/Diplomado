@@ -21,6 +21,7 @@
                             <th scope="col">CÓDIGO RGB</th>
                             <th scope="col">COLOR</th>
                             <th scope="col">CODIGO HEX</th>
+                            <th scope="col">VER MAS</th>
                             <th scope="col">STATUS</th>
                         </tr>
                     </thead>
@@ -31,7 +32,8 @@
                                 <td><%=color.RGB_CODE%></td>
                                 <td style="color: <%=color.RGB_CODE%>" class="fs-5 fw-bold font-monospace"><%=color.color%></td>
                                 <td><%=color.HEX_CODE%></td>
-                                <td><%=color.estatus%></td>
+                                <td><a href="https://encycolorpedia.es/<%=color.HEX_CODE.slice(1)%>" target="_blank" class="text-decoration-none text-black fw-bold">Click aqui</a></td>
+                                <td><%=color.estatus=='a' ? 'Activo' : 'Inactivo'%></td>
                             </tr>
                         <%})%>
                     </tbody>

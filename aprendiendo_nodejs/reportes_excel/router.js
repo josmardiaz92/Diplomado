@@ -2,8 +2,6 @@ const express=require('express'); //*llamamos a express
 const router=express.Router(); //*invocamos al modulo de enrrutamiento de expressJS
 const cargar=require('./funciones/cargar');
 
-
-
 router.get('/',(request,response)=>{
     response.render('index.ejs',{results:cargar('datos.xlsx')});
 });
