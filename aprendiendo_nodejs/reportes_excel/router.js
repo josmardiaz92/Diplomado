@@ -5,7 +5,7 @@ const cargar=require('./funciones/cargar');
 
 
 router.get('/',(request,response)=>{
-    response.send(cargar('datos.xlsx'));
-})
+    response.render('index.ejs',{results:cargar('datos.xlsx')});
+});
 
 module.exports=router; //*exportamos el enrrutador para poder utilizarlo desde la app
