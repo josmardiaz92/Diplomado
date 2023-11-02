@@ -31,6 +31,8 @@ form.addEventListener("submit", (event) => {
     .then(response => response.json())
     .then(result => {
         console.log(result);
+        window.location.href =('http://127.0.0.1:5500/vistas/pais_listar.html');
+
         // Puedes realizar cualquier acción adicional aquí, como redirigir o mostrar un mensaje de éxito
     })
     .catch(error => {

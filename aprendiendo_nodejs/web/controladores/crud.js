@@ -3,35 +3,98 @@ const conexion=require('../bd/bd');
 exports.save=(req, res) => {
     // Recibe los datos enviados en el cuerpo de la solicitud POST
     const data = req.body;
-    console.log(data)
 
     // Puedes acceder a los campos específicos en data
     const identificador = data.identificador;
-    const nom_pai = data.nom_pai;
-    const des_pai = data.des_pai;
-    const ali_pai = data.ali_pai;
-    const cti_pai = data.cti_pai;
-    const fky_con = data.fky_con;
-    const est_pai = data.est_pai;
 
-    // Realiza el procesamiento necesario con los datos
-    // Ejemplo de inserción en la base de datos con un módulo como 'mysql':
-    // const mysql = require("mysql");
-    // const connection = mysql.createConnection({ ... }); // Configura tu conexión a la base de datos
-    // connection.connect();
-    // connection.query("INSERT INTO tu_tabla SET ?", data, (error, results) => {
-    //   if (error) {
-    //     console.error("Error al insertar en la base de datos: ", error);
-    //     res.status(500).json({ error: "Error al insertar en la base de datos" });
-    //   } else {
-    //     console.log("Datos insertados correctamente");
-    //     res.json({ message: "Datos insertados correctamente" });
-    //   }
-    //   connection.end();
-    // });
+    switch (identificador) {
+        case 'continente':
+            const nom_con=request.body.nom_con;
+            const des_con=request.body.des_con;
+            const est_con=request.body.est_con;
+            conexion.query('insert into continente set ?',{nom_con:nom_con,des_con:des_con,est_con:est_con},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/continente_listar');
+                }
+            });
+            break;
+        case 'pais':
+            const nom_pai = data.nom_pai;
+            const des_pai = data.des_pai;
+            const ali_pai = data.ali_pai;
+            const cti_pai = data.cti_pai;
+            const fky_con = data.fky_con;
+            const est_pai = data.est_pai;
 
-    // Responde al cliente con un mensaje de confirmación
-    res.json({ message: "Datos recibidos y procesados correctamente en el enrutador" });
+            const values=[nom_pai,des_pai,ali_pai,cti_pai,fky_con,est_pai];
+            const query = 'INSERT INTO ubicacion.pais (nom_pai, des_pai, ali_pai, cti_pai, fky_con, est_pai) VALUES ($1, $2, $3, $4, $5, $6)';
+            conexion.query(query, values, (error,response)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    console.log('Datos insertados correctamente');
+                    // Después de guardar los datos con éxito, redirige a otra página
+                    res.json({ message: "Datos guardados correctamente" });
+                }
+            });
+            break;
+        case 'estado':
+            const nom_est=request.body.nom_est;
+            const des_est=request.body.des_est;
+            const fky_pai=request.body.fky_pai;
+            const est_est=request.body.est_est;
+            conexion.query('insert into estado set ?',{nom_est:nom_est,des_est:des_est,fky_pai:fky_pai,est_est:est_est},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/estado_listar');
+                }
+            });
+            break;
+        case 'ciudad':
+            const nom_ciu=request.body.nom_ciu;
+            const des_ciu=request.body.des_ciu;
+            const fky_est=request.body.fky_est;
+            const fky_zon=request.body.fky_zon;
+            const est_ciu=request.body.est_ciu;
+            conexion.query('insert into ciudad set ?',{nom_ciu:nom_ciu,des_ciu:des_ciu,fky_est:fky_est,fky_zon:fky_zon,est_ciu:est_ciu},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/ciudad_listar');
+                }
+            });
+            break;
+        case 'zona_horaria':
+            const nom_zon=request.body.nom_zon;
+            const acr_zon=request.body.acr_zon;
+            const dif_zon=request.body.dif_zon;
+            const est_zon=request.body.est_zon;
+            conexion.query('insert into zona_horaria set ?',{nom_zon:nom_zon,acr_zon:acr_zon,dif_zon:dif_zon,est_zon:est_zon},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/zona_horaria_listar');
+                }
+            });
+            break;
+        case 'usuario':
+            const user=request.body.user;
+            const rol=request.body.rol;
+            conexion.query('insert into usuario set ?',{user:user,rol:rol},(error,results)=>{
+                if(error){
+                    console.log(error);
+                }else{
+                    response.redirect('/');
+                }
+            });
+            break;
+        default:
+            console.log('no hay identificador');
+            break;
+    }
 }
 exports.update=(request,response)=>{
     const identificador=request.body.identificador;
