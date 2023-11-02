@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#" title="image/x-icon">
+        <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
+        <link href="../fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
+        <title>pais</title>
+    </hea>
+    <body>
+        <div id="navbar" class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="/">Sistema</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Horarios</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Ubicacion
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/vistas/ciudad_listar.html">Ciudad</a></li>
+                                <li><a class="dropdown-item" href="/vistas/continente_listar.html">Continente</a></li>
+                                <li><a class="dropdown-item" href="/vistas/estado_listar.html">Estado</a></li>
+                                <li><a class="dropdown-item" href="/vistas/pais_listar.html">País</a></li>
+                                <li><a class="dropdown-item" href="/vistas/zona_horaria_listar.html">Zona Horaria</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
+                </nav>
+        </div>
+        <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
+            <div class="col-10">
+                <h5>Nuevo Pais</h5>
+                <form action="/save" method="post" class="mt-4">
+                    <input hidden id="identificador" name="identificador" value="pais">
+                    <div class="mb-3">
+                        <label for="nom_pai" class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" id="nom_pai" name="nom_pai" placeholder="Nombre del Pais" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="des_pai" class="form-label">Descripción: </label>
+                        <input type="text" class="form-control" id="des_pai" name="des_pai" placeholder="Descripción del Pais" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ali_pai" class="form-label">Alias: </label>
+                        <input type="text" class="form-control" id="ali_pai" name="ali_pai" placeholder="Alias del Pais" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cti_pai" class="form-label">Código telefónico internacional: </label>
+                        <input type="text" class="form-control" id="cti_pai" name="cti_pai" placeholder="Codigo telefonico del Pais" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="fky_con" class="form-label">Continente: </label>
+                        <select id="fky_con" name="fky_con" class="form-select" required>
+                            <option value="">Seleccione...</option>
+                            
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="est_pai" class="form-label">Estado: </label>
+                        <select id="est_pai" name="est_pai" class="form-select" required>
+                            <option value="">Seleccione...</option>
+                            <option value="A">Activo</option>
+                            <option value="I">Inactivo</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="/vistas/pais_listar.html" class="btn border border-secondary">cancelar</a>
+                </form>
+            </div>
+        </div>
+
+        <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/pais_agregar.js"></script>
+        <script src="../js/agregar.js"></script>
+    </body>
+</html>

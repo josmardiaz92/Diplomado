@@ -232,7 +232,7 @@ router.get('/estado_buscar', (request, response) => {
 router.get('/ciudad_buscar', (request, response) => {
     const parametro = request.query.buscar;
     const busqueda = `%${parametro}%`;
-    conexion.query('SELECT * FROM ciudad WHERE nom_ciu LIKE ?', [busqueda], (error, results) => {
+    conexion.query('select c.*, e.nom_est, zh.nom_zon  from ciudad as c inner join estado as e on c.fky_est=e.cod_est inner join zona_horaria as zh on c.fky_zon=zh.cod_zon WHERE nom_ciu LIKE ? order by cod_ciu', [busqueda], (error, results) => {
         if (error) {
             throw error;
         } else {
