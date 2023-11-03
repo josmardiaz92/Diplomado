@@ -10,6 +10,17 @@ router.get("/",(req,res)=>{
     conexion.end;
 });
 
+router.get("/continente",(req,res)=>{
+    conexion.query('select * from ubicacion.continente order by nom_con',(err,response)=>{
+        if(!err){
+            res.json(response.rows);
+            conexion.end;
+        }else{
+            console.log('error: '+err.message);
+            conexion.end;
+        }
+    });
+})
 router.get("/pais",(req,res)=>{
     conexion.query('select p.*, c.nom_con  from ubicacion.pais as p inner join ubicacion.continente as c on p.fky_con=c.cod_con order by nom_pai',(err,response)=>{
         if(!err){

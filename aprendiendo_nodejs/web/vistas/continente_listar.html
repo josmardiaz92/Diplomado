@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="#" title="image/x-icon">
         <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
         <link href="../fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
-        <title>pais</title>
+        <title>continente</title>
     </hea>
     <body>
         <div id="navbar" class="sticky-top">
@@ -37,55 +37,40 @@
                                 <li><a class="dropdown-item" href="/vistas/zona_horaria_listar.html">Zona Horaria</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="/vistas/continente_agregar.html" class="btn btn-outline-dark">
+                                <i class="fa-solid fa-plus" style="color: #000000;"></i>
+                            </a>
+                        </li>
                         </ul>
+                        <form class="d-flex" role="search" action="/vistas/continente_buscar.html" method="GET">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" name="buscar" id="buscar" >
+                            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                        </form>
                     </div>
                     </div>
                 </nav>
         </div>
-        <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
+        <div class="row d-flex justify-content-center" id="containerTabla">
             <div class="col-10">
-                <h5>Nuevo Pais</h5>
-                <form action="/save" method="post" class="mt-4">
-                    <input hidden id="identificador" name="identificador" value="pais">
-                    <div class="mb-3">
-                        <label for="nom_pai" class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="nom_pai" name="nom_pai" placeholder="Nombre del Pais" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="des_pai" class="form-label">Descripción: </label>
-                        <input type="text" class="form-control" id="des_pai" name="des_pai" placeholder="Descripción del Pais" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="ali_pai" class="form-label">Alias: </label>
-                        <input type="text" class="form-control" id="ali_pai" name="ali_pai" placeholder="Alias del Pais" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="cti_pai" class="form-label">Código telefónico internacional: </label>
-                        <input type="text" class="form-control" id="cti_pai" name="cti_pai" placeholder="Codigo telefonico del Pais" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="fky_con" class="form-label">Continente: </label>
-                        <select id="fky_con" name="fky_con" class="form-select" required>
-                            <option value="">Seleccione...</option>
-                            
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label for="est_pai" class="form-label">Estado: </label>
-                        <select id="est_pai" name="est_pai" class="form-select" required>
-                            <option value="">Seleccione...</option>
-                            <option value="A">Activo</option>
-                            <option value="I">Inactivo</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-                    <a href="/vistas/pais_listar.html" class="btn border border-secondary">cancelar</a>
-                </form>
+                <table class="table table-bordered table-light table-striped text-center mt-4" id="tablaContinente">
+                    <thead>
+                        <tr class="text-dark">
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">DESCRIPCION</th>
+                            <th scope="col">ESTADO</th>
+                            <th scope="col">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </div>
         </div>
 
         <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../js/opcionesDinamicas.js"></script>
-        <script src="../js/agregar.js"></script>
+        <script src="../js/continente_listar.js"></script>
     </body>
 </html>

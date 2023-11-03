@@ -1,8 +1,13 @@
+const selecContinente=document.getElementById('fky_con',null);
+
+if(selecContinente){
+    continente_listar();
+}
+
 function continente_listar(){
     fetch('http://localhost:3000/pais_agregar')
     .then((response)=>response.json())
     .then((continentes)=>{
-        const selecContinente=document.getElementById('fky_con');
         continentes.forEach(continente=>{
             let option=document.createElement('option');
             option.value=`${continente.cod_con}`;
@@ -11,5 +16,3 @@ function continente_listar(){
         })
     })
 };
-
-continente_listar();
