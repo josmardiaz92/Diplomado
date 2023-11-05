@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="#" title="image/x-icon">
         <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
         <link href="../fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
-        <title>Agregar Continente</title>
+        <title>Agregar Estado</title>
     </hea>
     <body>
         <div id="navbar" class="sticky-top">
@@ -44,32 +44,39 @@
         </div>
         <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
             <div class="col-10">
-                <h5>Nuevo Continente</h5>
+                <h5>Nuevo Estado</h5>
                 <form action="/save" method="post" class="mt-4">
-                    <input hidden id="identificador" name="identificador" value="continente">
+                    <input hidden id="identificador" name="identificador" value="estado">
                     <div class="mb-3">
-                        <label for="nom_con" class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="nom_con" name="nom_con" tabindex="1" placeholder="Nombre del Continente" required>
+                        <label for="nom_est" class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" id="nom_est" name="nom_est" placeholder="Nombre del Estado" required>
                     </div>
                     <div class="mb-3">
-                        <label for="des_con" class="form-label">Descripción: </label>
-                        <input type="text" class="form-control" id="des_con" name="des_con" tabindex="1" placeholder="Descripción del Continente" required>
+                        <label for="des_est" class="form-label">Descripción: </label>
+                        <input type="text" class="form-control" id="des_est" name="des_est" placeholder="Descripción del Estado" required>
                     </div>
                     <div class="mb-3">
-                        <label for="est_con" class="form-label">Estado: </label>
-                        <select id="est_con" name="est_con" class="form-select" tabindex="3" required>
+                        <label for="fky_pai" class="form-label">Pais: </label>
+                        <select id="fky_pai" name="fky_pai" class="form-select" required>
+                            <option value="">Seleccione...</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="est_est" class="form-label">Estado: </label>
+                        <select id="est_est" name="est_est" class="form-select" required>
                             <option value="">Seleccione...</option>
                             <option value="A">Activo</option>
                             <option value="I">Inactivo</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
-                    <a href="/vistas/continente_listar.html" class="btn border border-secondary">cancelar</a>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="/vistas/estado_listar.html" class="btn border border-secondary">cancelar</a>
                 </form>
             </div>
         </div>
 
         <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
         <script src="../js/agregar.js"></script>
+        <script src="../js/opcionesDinamicas.js"></script>
     </body>
 </html>

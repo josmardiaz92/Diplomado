@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="#" title="image/x-icon">
         <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
         <link href="../fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
-        <title>Agregar Continente</title>
+        <title>zona horaria</title>
     </hea>
     <body>
         <div id="navbar" class="sticky-top">
@@ -37,39 +37,41 @@
                                 <li><a class="dropdown-item" href="/vistas/zona_horaria_listar.html">Zona Horaria</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="/vistas/zona_horaria_agregar.html" class="btn btn-outline-dark">
+                                <i class="fa-solid fa-plus" style="color: #000000;"></i>
+                            </a>
+                        </li>
                         </ul>
+                        <form class="d-flex" role="search" action="/vistas/zona_horaria_buscar.html" method="GET">
+                            <input class="form-control me-2" type="search" placeholder="Buscar" name="buscar" id="buscar" >
+                            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+                        </form>
                     </div>
                     </div>
                 </nav>
         </div>
-        <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
+        <div class="row d-flex justify-content-center" id="containerTabla">
             <div class="col-10">
-                <h5>Nuevo Continente</h5>
-                <form action="/save" method="post" class="mt-4">
-                    <input hidden id="identificador" name="identificador" value="continente">
-                    <div class="mb-3">
-                        <label for="nom_con" class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="nom_con" name="nom_con" tabindex="1" placeholder="Nombre del Continente" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="des_con" class="form-label">Descripción: </label>
-                        <input type="text" class="form-control" id="des_con" name="des_con" tabindex="1" placeholder="Descripción del Continente" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="est_con" class="form-label">Estado: </label>
-                        <select id="est_con" name="est_con" class="form-select" tabindex="3" required>
-                            <option value="">Seleccione...</option>
-                            <option value="A">Activo</option>
-                            <option value="I">Inactivo</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
-                    <a href="/vistas/continente_listar.html" class="btn border border-secondary">cancelar</a>
-                </form>
+                <table class="table table-bordered table-light table-striped text-center mt-4" id="tablaZonaHoraria">
+                    <thead>
+                        <tr class="text-dark">
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRE</th>
+                            <th scope="col">ACRONIMO</th>
+                            <th scope="col" class="col-2">DIFERENCIA HORARIA</th>
+                            <th scope="col">ESTADO</th>
+                            <th scope="col">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
             </div>
         </div>
 
         <script src="../bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../js/agregar.js"></script>
+        <script src="../js/zona_horaria_listar.js"></script>
     </body>
 </html>

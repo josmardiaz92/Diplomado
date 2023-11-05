@@ -36,6 +36,50 @@ form.addEventListener("submit", (event) => {
                 est_pai:est_pai
             }
             break;
+        case 'estado':
+            const nom_est=document.getElementById('nom_est').value;
+            const des_est=document.getElementById('des_est').value;
+            const fky_pai=document.getElementById('fky_pai').value;
+            const est_est=document.getElementById('est_est').value;
+                    
+            data={
+                identificador:identificador,
+                nom_est:nom_est,
+                des_est:des_est,
+                fky_pai:fky_pai,
+                est_est:est_est
+            }
+            break;
+        case 'ciudad':
+            const nom_ciu=document.getElementById('nom_ciu').value;
+            const des_ciu=document.getElementById('des_ciu').value;
+            const fky_est=document.getElementById('fky_est').value;
+            const fky_zon=document.getElementById('fky_zon').value;
+            const est_ciu=document.getElementById('est_ciu').value;
+                    
+            data={
+                identificador:identificador,
+                nom_ciu:nom_ciu,
+                des_ciu:des_ciu,
+                fky_est:fky_est,
+                fky_zon:fky_zon,
+                est_ciu:est_ciu
+            }
+            break;
+        case 'zona_horaria':
+            const nom_zon=document.getElementById('nom_zon').value;
+            const acr_zon=document.getElementById('acr_zon').value;
+            const dif_zon=document.getElementById('dif_zon').value;
+            const est_zon=document.getElementById('est_zon').value;
+                    
+            data={
+                identificador:identificador,
+                nom_zon:nom_zon,
+                acr_zon:acr_zon,
+                dif_zon:dif_zon,
+                est_zon:est_zon
+            }
+            break;
         default:
             data={};
             console.log('no hay identificador');

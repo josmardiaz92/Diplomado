@@ -7,7 +7,7 @@
         <link rel="shortcut icon" href="#" title="image/x-icon">
         <link rel="stylesheet" href="../bootstrap-5.3.2-dist/css/bootstrap.min.css">
         <link href="../fontawesome-free-6.4.2-web/css/all.min.css" rel="stylesheet">
-        <title>Agregar Continente</title>
+        <title>Agregar Zona Horaria</title>
     </hea>
     <body>
         <div id="navbar" class="sticky-top">
@@ -44,27 +44,31 @@
         </div>
         <div class="row d-flex justify-content-center w-100 mt-4" id="contenedorFormularioUsuario">
             <div class="col-10">
-                <h5>Nuevo Continente</h5>
+                <h5>Nueva Zona Horaria</h5>
                 <form action="/save" method="post" class="mt-4">
-                    <input hidden id="identificador" name="identificador" value="continente">
+                    <input hidden id="identificador" name="identificador" value="zona_horaria">
                     <div class="mb-3">
-                        <label for="nom_con" class="form-label">Nombre: </label>
-                        <input type="text" class="form-control" id="nom_con" name="nom_con" tabindex="1" placeholder="Nombre del Continente" required>
+                        <label for="nom_zon" class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" id="nom_zon" name="nom_zon" tabindex="1" placeholder="Nombre de la Zona Horaria" required>
                     </div>
                     <div class="mb-3">
-                        <label for="des_con" class="form-label">Descripción: </label>
-                        <input type="text" class="form-control" id="des_con" name="des_con" tabindex="1" placeholder="Descripción del Continente" required>
+                        <label for="acr_zon" class="form-label">Acrónimo: </label>
+                        <input type="text" class="form-control" id="acr_zon" name="acr_zon" tabindex="1" placeholder="Acrónimo de la Zona Horaria" required>
                     </div>
                     <div class="mb-3">
-                        <label for="est_con" class="form-label">Estado: </label>
-                        <select id="est_con" name="est_con" class="form-select" tabindex="3" required>
+                        <label for="dif_zon" class="form-label">Diferencia Horaria: </label>
+                        <input type="number" class="form-control" id="dif_zon" name="dif_zon" tabindex="1" placeholder="Diferencia Horaria" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="est_zon" class="form-label">Estado: </label>
+                        <select id="est_zon" name="est_zon" class="form-select" tabindex="3" required>
                             <option value="">Seleccione...</option>
                             <option value="A">Activo</option>
                             <option value="I">Inactivo</option>
                         </select>
                     </div>
                     <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
-                    <a href="/vistas/continente_listar.html" class="btn border border-secondary">cancelar</a>
+                    <a href="/vistas/zona_horaria_listar.html" class="btn border border-secondary">cancelar</a>
                 </form>
             </div>
         </div>
