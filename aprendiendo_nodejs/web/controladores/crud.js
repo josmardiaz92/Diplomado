@@ -66,21 +66,19 @@ exports.save=(req, res) => {
     }
     
 }
-exports.update=(request,response)=>{
-    const identificador=request.body.identificador;
+exports.update=(req, res)=>{
+    // Recibe los datos enviados en el cuerpo de la solicitud POST
+    const data = req.body;
+    // Puedes acceder a los campos específicos en data
+    const identificador = data.identificador;
     switch (identificador) {
         case 'continente':
-            const cod_con=request.body.cod_con;
-            const nom_con=request.body.nom_con;
-            const des_con=request.body.des_con;
-            const est_con=request.body.est_con;
-            conexion.query('update continente set ? where cod_con=?',[{nom_con:nom_con,des_con:des_con,est_con:est_con},cod_con],(error,results)=>{
-                if(error){
-                    console.log(error);
-                }else{
-                    response.redirect('/continente_listar');
-                }
-            });
+            const cod_con=data.cod_con;
+            const nom_con=data.nom_con;
+            const des_con=data.des_con;
+            const est_con=data.est_con;
+            values=[];
+            query = `select ubicacion.continente_modificar(${cod_con},'${nom_con}','${des_con}','${est_con}')`;
             break;
         case 'pais':
             const cod_pai=request.body.cod_pai;
@@ -156,6 +154,19 @@ exports.update=(request,response)=>{
         default:
             console.log('no hay identificador');
             break;
+    }
+    if(query!=''){
+        conexion.query(query, (error,response)=>{
+            if(error){
+                console.log(error);
+            }else{
+                console.log('Datos insertados correctamente');
+                // Después de guardar los datos con éxito, redirige a otra página
+                res.json({ message: "Datos guardados correctamente" });
+            }
+        });
+    }else{
+        console.log('Invalido');
     }
 }
 exports.delete=(request,response)=>{

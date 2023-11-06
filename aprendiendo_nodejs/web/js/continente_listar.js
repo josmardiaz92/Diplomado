@@ -1,54 +1,61 @@
-fetch('http://localhost:3000/continente')
-    .then((response)=>response.json())
-    .then((continentes)=>{
-        
-        const tablaContinente=document.getElementById('tablaContinente');
-        const body=tablaContinente.querySelector('tbody');
-        continentes.forEach(continente=>{
-            
-            let tr=document.createElement('tr');
+continente_listar();
 
-            let tdCodigo=document.createElement('td');
-            tdCodigo.textContent=`${continente.cod_con}`;
-            tr.appendChild(tdCodigo);
+function continente_listar() {
+    fetch('http://localhost:3000/continente')
+        .then((response) => response.json())
+        .then((continentes) => {
 
-            let tdNombre=document.createElement('td');
-            tdNombre.textContent=`${continente.nom_con}`;
-            tr.appendChild(tdNombre);
+            const tablaContinente = document.getElementById('tablaContinente');
+            const body = tablaContinente.querySelector('tbody');
+            continentes.forEach(continente => {
 
-            let tdDescripcion=document.createElement('td');
-            tdDescripcion.textContent=`${continente.des_con}`;
-            tr.appendChild(tdDescripcion);
+                let tr = document.createElement('tr');
 
-            let tdEstatus=document.createElement('td');
-            tdEstatus.textContent+=`${continente.est_con}`;
-            tr.appendChild(tdEstatus);
+                let tdCodigo = document.createElement('td');
+                tdCodigo.textContent = `${continente.cod_con}`;
+                tr.appendChild(tdCodigo);
 
-            let tdAcciones=document.createElement('td');
+                let tdNombre = document.createElement('td');
+                tdNombre.textContent = `${continente.nom_con}`;
+                tr.appendChild(tdNombre);
 
-            let aEditar=document.createElement('a');
-            aEditar.classList.add('text-info','text-decoration-none');
-            aEditar.href='#';
-            let iEditar=document.createElement('i');
-            iEditar.classList.add('fa-solid','fa-pen-to-square');
-            iEditar.style="color: #7599d7;";
-            aEditar.appendChild(iEditar);
-            tdAcciones.appendChild(aEditar);
+                let tdDescripcion = document.createElement('td');
+                tdDescripcion.textContent = `${continente.des_con}`;
+                tr.appendChild(tdDescripcion);
 
-            let span=document.createElement('span');
-            span.textContent=' | ';
-            tdAcciones.appendChild(span);
+                let tdEstatus = document.createElement('td');
+                tdEstatus.textContent += `${continente.est_con}`;
+                tr.appendChild(tdEstatus);
 
-            let aEliminar=document.createElement('a');
-            aEliminar.classList.add('text-danger','text-decoration-none');
-            aEliminar.href='#';
-            let iEliminar=document.createElement('i');
-            iEliminar.classList.add('fa-solid','fa-trash');
-            iEliminar.style="color: #ab0707;";
-            aEliminar.appendChild(iEliminar);
-            tdAcciones.appendChild(aEliminar);
+                let tdAcciones = document.createElement('td');
 
-            tr.appendChild(tdAcciones);
-            body.appendChild(tr);
-        })
-    })
+                let aEditar = document.createElement('a');
+                aEditar.classList.add('text-info', 'text-decoration-none');
+                aEditar.setAttribute('data-bs-toggle', 'modal');
+                aEditar.setAttribute('data-bs-target', '#modalEditar');
+                aEditar.setAttribute('data-bs-whatever', `${continente.cod_con}`);
+                aEditar.role = 'button';
+                let iEditar = document.createElement('i');
+                iEditar.classList.add('fa-solid', 'fa-pen-to-square');
+                iEditar.style = "color: #7599d7;";
+                aEditar.appendChild(iEditar);
+                tdAcciones.appendChild(aEditar);
+
+                let span = document.createElement('span');
+                span.textContent = ' | ';
+                tdAcciones.appendChild(span);
+
+                let aEliminar = document.createElement('a');
+                aEliminar.classList.add('text-danger', 'text-decoration-none');
+                aEliminar.href = '#';
+                let iEliminar = document.createElement('i');
+                iEliminar.classList.add('fa-solid', 'fa-trash');
+                iEliminar.style = "color: #ab0707;";
+                aEliminar.appendChild(iEliminar);
+                tdAcciones.appendChild(aEliminar);
+
+                tr.appendChild(tdAcciones);
+                body.appendChild(tr);
+            });
+        });
+}
