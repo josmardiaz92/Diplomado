@@ -116,6 +116,7 @@ router.get('/zona_horaria',(req,res)=>{
 
 router.post('/save',crud.save);
 router.post('/update',crud.update);
+router.post('/delete',crud.delete);
 
 
 

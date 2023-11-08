@@ -46,11 +46,12 @@ function continente_listar() {
                 tdAcciones.appendChild(span);
 
                 let aEliminar = document.createElement('a');
-                aEliminar.classList.add('text-danger', 'text-decoration-none');
+                aEliminar.classList.add('text-danger', 'text-decoration-none','btnEliminar');
                 aEliminar.href = '#';
                 let iEliminar = document.createElement('i');
                 iEliminar.classList.add('fa-solid', 'fa-trash');
                 iEliminar.style = "color: #ab0707;";
+                iEliminar.setAttribute('data-bs-whatever', `${continente.cod_con}`);
                 aEliminar.appendChild(iEliminar);
                 tdAcciones.appendChild(aEliminar);
 
