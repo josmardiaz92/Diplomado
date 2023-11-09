@@ -39,6 +39,30 @@ const verificarSesion=(sesion)=>{
     return <h1>No Has Iniciado Sesion</h1>
   }
 }
+const Aula=()=>(
+  <>
+    <h1 style={{color:color}} >¡Hola {nombre}!</h1>
+    <p>Te doy la bienvenida a esta Experiencia de Aprendizaje</p>
+    {clase && <p>Estamos en clase del {clase}</p>}
+    <h4>Estos son los Profesores:</h4>
+        <ul>
+          {instructores.map((instructor,index)=>{
+            return <li key={index}>{instructor}</li>
+          })}
+        </ul>
+  </>
+);
+const App=()=>(
+  <>
+    {sesion===true ?
+      <>
+        <Aula/>
+      </>  
+      :
+      <h1>No Has Iniciado Sesion</h1>
+  }
+  </>
+);
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-root.render(JSX)
+root.render(<App/>); /* asi se llama para no llamarlo como funcion js */
