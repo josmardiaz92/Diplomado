@@ -4,24 +4,31 @@ import Aula from './compoentes/Aula';
 import styles from './index.module.css';
 import Boton from './elementos/Boton';
 import FormularioInicioSesion from './compoentes/FormularioInicioSesion';
+import Contadorclass from './compoentes/ContadorClass';
+import Contador from './compoentes/Contador';
+import ContadorFuncional from './compoentes/ContadorFuncional';
+import H1 from './elementos/Titulo';
+import Contenedor from './elementos/contenedor';
 
 const App=()=>{
   const [sesion, cambiarEstadoSesion] = useState(false);
   return(
-    <div className={styles.contenedor}>
+    <Contenedor>
       {sesion===true ?
         <>
           <Aula/>
-          <Boton rojo onClick={()=>cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
+          {/* <ContadorFuncional incrementar={1} disminuir={1}/> */}
+          <ContadorFuncional incrementar={1} disminuir={1}/>
+          <Boton rojo anchocompleto onClick={()=>cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
         </>  
         :
         <>
-          <h1>No Has Iniciado Sesion</h1>
-          <FormularioInicioSesion/>
+          <H1>No Has Iniciado Sesión</H1>
+          <FormularioInicioSesion cambiarEstadoSesion={cambiarEstadoSesion}/>
           {/* <Boton verde anchocompleto onClick={()=>cambiarEstadoSesion(true)}>Iniciar Sesión</Boton> */}
         </>
       }
-    </div>
+    </Contenedor>
   )
 };
 
