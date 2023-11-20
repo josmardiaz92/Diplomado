@@ -11,7 +11,7 @@ import H1 from './elementos/Titulo';
 import Contenedor from './elementos/contenedor';
 
 const App=()=>{
-  const [sesion, cambiarEstadoSesion] = useState(false);
+  const [sesion, cambiarEstadoSesion] = useState(true);
   return(
     <Contenedor>
       {sesion===true ?
