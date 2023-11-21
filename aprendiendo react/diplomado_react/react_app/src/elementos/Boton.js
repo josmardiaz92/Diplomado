@@ -4,7 +4,6 @@ const Boton=styled.button`
     color: white;
     background: #ff6d00;
     display: inline-block;
-    margin: ${props=>props.margen ? '1% 2%' : '0%'};
     margin-top: 10px;
     padding: 10px;
     border: none;
@@ -12,7 +11,7 @@ const Boton=styled.button`
     font-weight: bold;
     font-family: verdana, Arial, Helvetica, sans-serif;
     cursor: pointer;
-    width: ${props=>props.anchocompleto ? '100%' : (props=>props.anchomedio ? '46%' : 'auto')};
+    width: ${props=>props.anchocompleto ? '100%' : 'auto'};
 
     &:hover{
         color: white;
@@ -26,10 +25,6 @@ const Boton=styled.button`
     ${props=>props.verde && css`
         color: white;
         background: green;
-    `}
-    ${props=>props.negro && css`
-        color: white;
-        background: black;
     `}
 `;
 

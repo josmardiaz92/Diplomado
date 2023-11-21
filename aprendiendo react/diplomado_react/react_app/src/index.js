@@ -1,34 +1,33 @@
 import React, {useState} from 'react'; //importando el hook useState
 import ReactDOM from 'react-dom/client';
 import Aula from './compoentes/Aula';
-import styles from './index.module.css';
+import './index.css';
 import Boton from './elementos/Boton';
 import FormularioInicioSesion from './compoentes/FormularioInicioSesion';
-import Contadorclass from './compoentes/ContadorClass';
-import Contador from './compoentes/Contador';
 import ContadorFuncional from './compoentes/ContadorFuncional';
-import H1 from './elementos/Titulo';
-import Contenedor from './elementos/contenedor';
+import ContadorUseReducer from './compoentes/ContadorUseReducer';
+import Blog from './compoentes/Blog';
 
 const App=()=>{
   const [sesion, cambiarEstadoSesion] = useState(true);
   return(
-    <Contenedor>
+    <div className='contenedor'>
       {sesion===true ?
         <>
           <Aula/>
           {/* <ContadorFuncional incrementar={1} disminuir={1}/> */}
-          <ContadorFuncional incrementar={1} disminuir={1}/>
+          <Blog/>
+          <ContadorUseReducer/>
           <Boton rojo anchocompleto onClick={()=>cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
         </>  
         :
         <>
-          <H1>No Has Iniciado Sesión</H1>
+          <h2 className='titulo'>No Has Iniciado Sesión</h2>
           <FormularioInicioSesion cambiarEstadoSesion={cambiarEstadoSesion}/>
           {/* <Boton verde anchocompleto onClick={()=>cambiarEstadoSesion(true)}>Iniciar Sesión</Boton> */}
         </>
       }
-    </Contenedor>
+    </div>
   )
 };
 

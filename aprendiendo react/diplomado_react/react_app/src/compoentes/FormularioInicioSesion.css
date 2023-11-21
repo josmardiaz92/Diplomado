@@ -1,0 +1,43 @@
+.formulario{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; /* asi se divide en 3 fracciones iguales */
+    gap: 20px;
+    margin: 20px 0 0 0;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input{
+    font-size: 14px;
+    width: 94%;
+    color: black;
+    background-color: #dfdfdf;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #0ba000;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 5px;
+}
+
+.boton{
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background: black;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+.boton:hover{
+    background: #0ba000;
+    color: #fff;
+}

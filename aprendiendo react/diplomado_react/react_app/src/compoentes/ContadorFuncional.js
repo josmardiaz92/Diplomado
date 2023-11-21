@@ -1,8 +1,22 @@
-import React, {useState} from "react";
-import Boton from "../elementos/Boton";
+import React, {useState,useEffect} from "react";
+import './Contador.css';
 
 const ContadorFuncional=(props)=>{
     const [contador, cambiarContador]=useState(0);
+    useEffect(()=>{
+        console.log('Se ha renderizado el componente');
+    });
+    useEffect(()=>{
+        console.log('Se ha renderizado el componente por primera vez');
+    },[]);
+    useEffect(()=>{
+        console.log('Se ha cambiado el estado del contador');
+    },[contador]);
+    useEffect(()=>{
+        return(()=>{
+            console.log('el componente ha dejado de mostrarse en la app');
+        });
+    },[]);
     const incrementar=(cantidad)=>{
         cambiarContador(contador+cantidad);
     }
@@ -16,8 +30,8 @@ const ContadorFuncional=(props)=>{
     return(
         <div>
             <h2>Esta es la calse número {contador}</h2>
-            <Boton negro anchomedio margen onClick={()=>incrementar(props.incrementar)}>Incrementar</Boton>
-            <Boton negro anchomedio margen onClick={()=>disminuir(props.disminuir)}>Disminuir</Boton>
+            <button className="boton-contador" onClick={()=>incrementar(props.incrementar)}>Incrementar</button>
+            <button className="boton-contador" onClick={()=>disminuir(props.disminuir)}>Disminuir</button>
         </div>
     );
 }
