@@ -19,6 +19,7 @@ const Formulario = ({continentes,cambiarContinentes}) => {
                 }
             ]
         );
+        cambiarNombreContinente('');
     }
     return(
         <form action="" className="formulario" onSubmit={prevenirEnvio}>

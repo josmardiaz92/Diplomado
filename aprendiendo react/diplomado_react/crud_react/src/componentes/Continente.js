@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckSquare, faPenToSquare, faTrash, faSquare } from '@fortawesome/free-solid-svg-icons';
 
-const Continente=({continente, cambiarEstatus})=>{
+const Continente=({continente, cambiarEstatus, editarContinente, eliminarContinente})=>{
     const [editandoContienente, cambiarEditandoContinente]=useState(false);
     const [nuevoContinente, cambiarNuevoContinente]=useState(continente.nombre);
     const prevenirEnvio=(e)=>{
         e.preventDefault();
+        editarContinente(continente.id, nuevoContinente)
         cambiarEditandoContinente(false);
     }
     return(
@@ -50,6 +51,7 @@ const Continente=({continente, cambiarEstatus})=>{
                 <FontAwesomeIcon
                     icon={faTrash}
                     className="listado_icono listado_icono_accion"
+                    onClick={()=>eliminarContinente(continente.id)}
                 />
             </div>
         </li>
